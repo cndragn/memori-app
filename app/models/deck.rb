@@ -1,6 +1,6 @@
 class Deck < ApplicationRecord
-  Deck belongs_to :category
-  Deck belongs_to :user
-  Deck has_many :cards
-  Deck has_many :users, through: :favorite
+  belongs_to :category
+  belongs_to :user
+  has_many :cards
+  has_many :users, through: :favorite
 end
