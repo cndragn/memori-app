@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301004053) do
+ActiveRecord::Schema.define(version: 20180301202936) do
 
-  create_table "decks", force: :cascade do |t|
+  create_table "cards", force: :cascade do |t|
     t.string "original"
     t.string "target"
     t.string "language"
@@ -20,8 +20,30 @@ ActiveRecord::Schema.define(version: 20180301004053) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "ratings", force: :cascade do |t|
-    t.string "stars"
+  create_table "categories", force: :cascade do |t|
+    t.string "label"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "deck_users", force: :cascade do |t|
+    t.integer "deck_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "decks", force: :cascade do |t|
+    t.string "language"
+    t.string "title"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "scores", force: :cascade do |t|
+    t.integer "correct"
+    t.integer "wrong"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
