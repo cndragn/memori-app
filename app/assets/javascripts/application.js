@@ -13,3 +13,9 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $('.slider').slider();
+  $(".button-collapse").sideNav();
+});
+</script>
