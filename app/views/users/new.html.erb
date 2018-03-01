@@ -1,7 +1,9 @@
-<h1>Register</h1>
+<%= render 'layouts/header' %>
 
 <%= render 'form', user: @user %>
 <!-- Changed the link tag below. -->
 <%= link_to 'Log In', login_path %>
 
 <%= link_to 'Back', users_path %>
+
+<%= render 'layouts/footer' %>

@@ -1,0 +1,17 @@
+<nav>
+  <div class="nav-wrapper white">
+    <a href="#!" class="brand-logo left black-text">
+      <%= image_tag "logo4.png" %>
+    <a href="#" data-activates="mobile-demo" class="right button-collapse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <% if current_user %>
+        <li>Signed in as <%= current_user.name %> </li>
+        <li><%= link_to "My profile", user_show_path %></li>
+        <li><%= link_to "Logout", logout_path %></li>
+      <% else %>
+        <li><%= link_to 'Login', login_path %></li>
+        <li><%= link_to 'Register', register_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

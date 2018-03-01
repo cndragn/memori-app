@@ -1,29 +1,60 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/header' %>
 
-<h1>Users</h1>
+<div class="slider">
+  <ul class="slides">
+    <li><%= image_tag "background-dark.jpg" %>
+      <div class="caption center-align">
+        <h3>DISCOVER</h3>
+        <h5 class="light">a simple way to learn a new language</h5>
+        <br>
+        <a class="waves-effect waves-light btn yellow lighten-1 black-text">Sign up</a>
+      </div>
+    </li>
+    <li><%= image_tag "background2-dark.jpg"  %>
+      <div class="caption left-align">
+        <h3>IMPROVE AND UPDATE</h3>
+        <h5 class="light">your language skills</h5>
+        <br>
+        <a class="waves-effect waves-light btn yellow lighten-1 black-text">Sign up</a>
+      </div>
+    </li>
+    <li><%= image_tag "background3-dark.jpg" %>
+      <div class="caption right-align">
+        <h3>TRAVEL</h3>
+        <h5 class="light">and be better prepared</h5>
+        <br>
+          <a class="waves-effect waves-light btn yellow lighten-1 black-text">Sign up</a>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+      </div>
+    </li>
+  </ul>
+</div>
+<br>
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<div class="row">
+  <div class="col s4 center">
+    <div class="card-panel opacity">
+    <i class="large material-icons center-align">check_circle</i><h3>Read more</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+</div>
+
+  <div class="col s4 center">
+    <div class="card-panel">
+    <i class="large material-icons">video_library</i><h3>Demo</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+</div>
+  <div class="col s4 center">
+    <div class="card-panel">
+      <i class="large material-icons">person</i><h3>About</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+
+<%= render 'layouts/footer' %>
