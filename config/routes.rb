@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :cards
   resources :categories
   resources :decks
-  root 'page#index'
+  root 'users#index'
 
   get '/secret' => 'page#secret'
 
