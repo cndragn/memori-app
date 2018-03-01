@@ -1,25 +1,4 @@
-<nav>
-  <div class="nav-wrapper white">
-    <div class="row">
-    <div class="col s2 left">
-    <a href="#!" class="brand-logo left black-text">
-      <%= image_tag "logo4.png" %>
-    </div>
-    <div class="col s2 right">
-    <a href="#" data-activates="mobile-demo" class="right button-collapse black"><i class="material-icons black">menu</i></a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="#" class="black-text large">Login</a></li>
-      <li><a href="#" class="black-text">Signup</a></li>
-    </ul>
-    <ul class="side-nav" id="mobile-demo">
-      <li><a href="#">Read more</a></li>
-      <li><a href="#">Demo</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-  </div>
-  </div>
-  </div>
-</nav>
+<%= render 'layouts/header' %>
 
 <div class="slider">
   <ul class="slides">
@@ -78,24 +57,4 @@
 <br>
 <br>
 
-<footer class="page-footer grey">
-    <div class="row">
-       <div id="footer-left" class="col s2 left">
-         <%= image_tag "logo2.png" %>
-        </div>
-        <div id="footer-center" class="col s8 center">
-        </div>
-        <div id="footer-right" class="col s2 right">
-          <h5 class="white-text">Follow Us</h5>
-          <img src="http://www.freeiconspng.com/uploads/facebook-logo-png-white-facebook-logo-png-white-facebook-icon-png--32.png" alt="" height="60" width="60">
-          <img src="http://www.thelayerfund.com/wp-content/uploads/2017/10/instagram-logo-for-business-card-business-cards-copy-printing-and-screen-printing-in-winston-ideas.png" alt="" height="58" width="58">
-       </div>
-      </div>
-    </div>
-
-    <div class="footer-copyright">
-      <div class="container">
-      © 2018 Copyright Memori
-      <a class="grey-text text-lighten-4 right" href="#!">Terms of Service</a>
-      </div>
-  </footer>
+<%= render 'layouts/footer' %>
