@@ -1,0 +1,2 @@
+class DeckUser < ApplicationRecord
+end
