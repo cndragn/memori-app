@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     # If the user exists AND the password entered is correct.
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect_to root_path
+      redirect_to users_path
     else
       # If user's login doesn't work, send them back to the login form.
       redirect_to login_path

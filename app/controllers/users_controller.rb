@@ -28,12 +28,12 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_path
+      redirect_to users_path
     else
       redirect_to register_path
     end
   end
-  
+
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json

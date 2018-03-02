@@ -1,60 +1,37 @@
 <%= render 'layouts/header' %>
 
-<div class="slider">
-  <ul class="slides">
-    <li><%= image_tag "background-dark.jpg" %>
-      <div class="caption center-align">
-        <h3>DISCOVER</h3>
-        <h5 class="light">a simple way to learn a new language</h5>
-        <br>
-        <a href="/register" class="waves-effect waves-light btn yellow lighten-1 black-text">Sign up</a>
-      </div>
-    </li>
-    <li><%= image_tag "background2-dark.jpg"  %>
-      <div class="caption left-align">
-        <h3>IMPROVE AND UPDATE</h3>
-        <h5 class="light">your language skills</h5>
-        <br>
-        <a href="/register" class="waves-effect waves-light btn yellow lighten-1 black-text">Sign up</a>
-      </div>
-    </li>
-    <li><%= image_tag "background3-dark.jpg" %>
-      <div class="caption right-align">
-        <h3>TRAVEL</h3>
-        <h5 class="light">and be better prepared</h5>
-        <br>
-          <a href="/register" class="waves-effect waves-light btn yellow lighten-1 black-text">Sign up</a>
-
-      </div>
-    </li>
-  </ul>
+<div class="header">
+  <%= image_tag "header1.jpg" %>
+  <img class="responsive-img" src="header1.jpg" alt="">
 </div>
+
 <br>
 <br>
+    <div class="row">
+      <div class="col s12 m6 l6 center">
+        <div class="card-panel yellow lighten-2">
+          <a href="/decks/new" class="btn-floating btn-large waves-effect waves-light black"><i class="material-icons">add</i></a>
+          <h3>CREATE</h3>
+        <p>Create your own studydeck with the words you want to learn</p>
+        </div>
+      </div>
 
-<div class="row">
-
-  <div class="col s4 center">
-    <div class="card-panel">
-    <i class="large material-icons center-align">check_circle</i><h3>Read more</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
-</div>
-
-  <div class="col s4 center">
-    <div class="card-panel">
-    <i class="large material-icons">video_library</i><h3>Demo</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
-</div>
-  <div class="col s4 center">
-    <div class="card-panel">
-      <i class="large material-icons">person</i><h3>About</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="col s12 m6 l6 center">
+        <div class="card-panel yellow lighten-2">
+          <a href="/decks" class="btn-floating btn-large waves-effect waves-light black"><i class="material-icons">search</i></a>
+          <h3>FIND</h3>
+        <p>Use our library of studydecks to find one you want to use</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
+    <div class="row">
+      <div class="col s12">
+        <div class="card-panel yellow lighten-2">
+          <h1>Popular decks</h1>
+        </div>
+      </div>
+    </div>
 <br>
 <br>
 

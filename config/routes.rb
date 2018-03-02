@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   resources :cards
   resources :categories
   resources :decks
-  root 'users#index'
+  root 'page#index'
 
   get '/secret' => 'page#secret'
 
   get '/register' => 'users#new'
+
   resources :users
 
   get '/login' => 'sessions#new'
