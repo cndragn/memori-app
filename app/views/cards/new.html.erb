@@ -2,6 +2,6 @@
   <%= image_tag "header2.jpg" %>
 </div>
 
-<%= render 'form', card: @card %>
+<%= render 'form', card: @card, deck: @deck %>
 
-<%= link_to 'Back', cards_path %>
+<%= link_to 'Back', @deck %>
