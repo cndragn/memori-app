@@ -30,7 +30,6 @@ class DecksController < ApplicationController
       if @deck.save
         format.html { redirect_to @deck, notice: 'Deck was successfully created.' }
         format.json { render :show, status: :created, location: @deck }
-        redirect_to new_card_path
       else
         format.html { render :new }
         format.json { render json: @deck.errors, status: :unprocessable_entity }
@@ -70,6 +69,6 @@ class DecksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def deck_params
-      params.require(:deck).permit(:language, :title, :description)
+      params.require(:deck).permit(:language, :title, :description, :category_id)
     end
 end

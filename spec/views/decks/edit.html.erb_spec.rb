@@ -5,7 +5,8 @@ RSpec.describe "decks/edit", type: :view do
     @deck = assign(:deck, Deck.create!(
       :language => "MyString",
       :title => "MyString",
-      :description => "MyString"
+      :description => "MyString",
+      :category => nil
     ))
   end
 
@@ -19,6 +20,8 @@ RSpec.describe "decks/edit", type: :view do
       assert_select "input[name=?]", "deck[title]"
 
       assert_select "input[name=?]", "deck[description]"
+
+      assert_select "input[name=?]", "deck[category_id]"
     end
   end
 end
