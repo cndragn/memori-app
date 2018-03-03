@@ -15,7 +15,3 @@
 //= require turbolinks
 //= require_tree .
 //= require materialize
-
-$(document).ready(function(){
-  $(".button-collapse").sideNav();
-});
