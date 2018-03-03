@@ -11,22 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :original %>
-    <%= form.text_field :original, id: :card_original %>
-  </div>
+  <div class="container">
+    <div class="row">
+      <div class="panel-card">
+      <div class="col s12 m6 l6">
 
-  <div class="field">
-    <%= form.label :target %>
-    <%= form.text_field :target, id: :card_target %>
-  </div>
+        <h1>New Card</h1>
 
-  <div class="field">
-    <%= form.label :language %>
-    <%= form.text_field :language, id: :card_language %>
-  </div>
+      <div class="field">
+        <%= form.label :original %>
+        <%= form.text_field :original, id: :card_original %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit %>
+      <div class="field">
+        <%= form.label :target %>
+        <%= form.text_field :target, id: :card_target %>
+      </div>
+
+      <div class="field">
+        <%= form.label :language %>
+        <%= form.text_field :language, id: :card_language %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    </div>
   </div>
+</div>
+</div>
 <% end %>
