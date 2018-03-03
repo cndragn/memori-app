@@ -6,12 +6,14 @@ RSpec.describe "decks/index", type: :view do
       Deck.create!(
         :language => "Language",
         :title => "Title",
-        :description => "Description"
+        :description => "Description",
+        :category => nil
       ),
       Deck.create!(
         :language => "Language",
         :title => "Title",
-        :description => "Description"
+        :description => "Description",
+        :category => nil
       )
     ])
   end
@@ -21,5 +23,6 @@ RSpec.describe "decks/index", type: :view do
     assert_select "tr>td", :text => "Language".to_s, :count => 2
     assert_select "tr>td", :text => "Title".to_s, :count => 2
     assert_select "tr>td", :text => "Description".to_s, :count => 2
+    assert_select "tr>td", :text => nil.to_s, :count => 2
   end
 end

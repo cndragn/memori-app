@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  resources :decks
+  resources :categories
   resources :scores
   resources :cards
-  resources :categories
-  resources :decks
   root 'page#index'
 
   get '/secret' => 'page#secret'
