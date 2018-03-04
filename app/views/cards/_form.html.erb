@@ -1,4 +1,4 @@
-<%= form_with(model: card, local: true) do |form| %>
+<%= form_for([deck, card]) do |form| %>
   <% if card.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(card.errors.count, "error") %> prohibited this card from being saved:</h2>
@@ -16,7 +16,7 @@
       <div class="panel-card">
       <div class="col s12 m6 l6">
 
-        <h1>New Card</h1>
+        <h1>New Cards</h1>
 
       <div class="field">
         <%= form.label :original %>
@@ -36,6 +36,8 @@
       <div class="actions">
         <%= form.submit %>
       </div>
+      <%= link_to 'Back', @deck %>
+
     </div>
   </div>
 </div>

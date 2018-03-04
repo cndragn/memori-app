@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_deck, only: [:new, :create]
   # GET /cards
   # GET /cards.json
   def index
@@ -47,7 +47,7 @@ class CardsController < ApplicationController
   # POST /cards
   # POST /cards.json
   def create
-    @card = Card.new(card_params)
+    @card = @deck.cards.new(card_params)
 
     respond_to do |format|
       if @card.save
@@ -94,4 +94,9 @@ class CardsController < ApplicationController
     def card_params
       params.require(:card).permit(:original, :target, :language)
     end
+
+    def set_deck
+      @deck = Deck.find(params[:deck_id])
+    end
+
 end
