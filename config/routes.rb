@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   get '/register' => 'users#new'
 
-  resources :users
+  resources :users do
+  resources :decks
+end
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
