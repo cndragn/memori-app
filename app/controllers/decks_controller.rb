@@ -14,6 +14,7 @@ class DecksController < ApplicationController
 
   # GET /decks/new
   def new
+    @user = User.find(params[:user_id])
     @deck = Deck.new
   end
 
@@ -25,6 +26,8 @@ class DecksController < ApplicationController
   # POST /decks.json
   def create
     @deck = Deck.new(deck_params)
+    @user = current_user
+    @deck.user = @user
 
     respond_to do |format|
       if @deck.save
@@ -69,6 +72,6 @@ class DecksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def deck_params
-      params.require(:deck).permit(:language, :title, :description, :category_id)
+      params.require(:deck).permit(:language, :title, :description, :category_id, :user_id, :language_id)
     end
 end

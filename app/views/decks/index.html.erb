@@ -31,7 +31,8 @@
     </div>
   </div>
 
-  <p><%= link_to 'New Deck', new_deck_path %></p>
+  <p><%= link_to 'New Deck', new_user_deck_path(current_user.id) %></p>
+
 
   <div class="row">
 
@@ -43,7 +44,7 @@
             <tr>
               <h3><%= link_to deck.title, deck %></h3>
               <p><%= deck.description %></p>
-              <p><%= deck.language %> | <%= deck.category.label %></p>
+              <p><%= deck.language.lingua %> | <%= deck.category.label %></p>
               <p><%= link_to 'Edit', edit_deck_path(deck) %> | <%= link_to 'Destroy', deck, method: :delete, data: { confirm: 'Are you sure?' } %></p>
             </tr>
           </tbody>

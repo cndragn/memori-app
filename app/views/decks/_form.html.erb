@@ -18,10 +18,9 @@
         <h5>Create</h5>
         <br>
         <div class="field">
-          <%= form.label :language %>
-          <%= form.text_field :language, id: :deck_language %>
+          <!-- <%= form.label :language_id %> -->
+          <%= form.hidden_field :language_id, id: :deck_language_id, :value => 1  %>
         </div>
-
 
         <div class="field">
           <%= form.label :title %>
@@ -37,6 +36,11 @@
           <%= form.label :category_id %>
           <%= form.text_field :category_id, id: :deck_category_id %>
         </div>
+
+        <!-- <div class="field">
+          <%= form.label :user_id %>
+          <%= form.text_field :user_id, id: :deck_user_id %>
+        </div> -->
 
         <div class="actions">
           <%= form.submit %>
