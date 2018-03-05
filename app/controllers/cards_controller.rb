@@ -37,6 +37,7 @@ class CardsController < ApplicationController
 
   # GET /cards/new
   def new
+    @deck = Deck.find(params[:deck_id])
     @card = Card.new
   end
 
