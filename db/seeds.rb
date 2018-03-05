@@ -19,5 +19,5 @@ Deck.create(title: "Courtesy", description: "Be kind, Rewind", category_id: 1, u
 Deck.create(title: "Food", description: "Gotta eat sometime!", category_id: 2, user_id: 1, language_id: 1)
 Deck.create(title: "Cuisine", description: "Stuff that goes on the fancy menu", category_id: 2, user_id: 1, language_id: 1)
 
-Card.create(original: "hello",target: "hola", language: "spanish", deck_id: 1)
-Card.create(original: "bye",target: "adios", language: "spanish", deck_id: 1)
+Card.create(original: "hello",target: "hola", language: "", deck_id: 1, language_id: 1)
+Card.create(original: "bye",target: "adios", language: "", deck_id: 1, language_id: 1)
