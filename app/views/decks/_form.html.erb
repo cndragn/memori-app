@@ -32,15 +32,11 @@
           <%= form.text_field :description, id: :deck_description %>
         </div>
 
-        <div class="field">
+        <div class="input_field">
           <%= form.label :category_id %>
-          <%= form.text_field :category_id, id: :deck_category_id %>
-        </div>
 
-        <!-- <div class="field">
-          <%= form.label :user_id %>
-          <%= form.text_field :user_id, id: :deck_user_id %>
-        </div> -->
+          <%= form.collection_select :category_id, Category.order(:label),:id,:label, :include_blank => true %>
+        </div>
 
         <div class="actions">
           <%= form.submit %>

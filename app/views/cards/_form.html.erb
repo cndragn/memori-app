@@ -29,8 +29,8 @@
       </div>
 
       <div class="field">
-        <%= form.label :language %>
-        <%= form.text_field :language, id: :card_language %>
+        <!-- <%= form.label :language_id %> -->
+        <%= form.hidden_field :language_id, id: :card_language_id, :value => @deck.language_id %>
       </div>
 
       <div class="actions">
