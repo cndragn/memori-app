@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit, :update, :destroy]
-  before_action :set_deck, only: [:new, :create]
+  before_action :set_deck, only: [:index, :new, :create]
   # GET /cards
   # GET /cards.json
   def index
