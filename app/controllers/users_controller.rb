@@ -11,6 +11,10 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+    @decks = Deck.all
+
+    @mydecks = Deck.where(user_id: @user)
+
   end
 
   # GET /users/new
