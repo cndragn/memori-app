@@ -45,7 +45,7 @@
               <h3><%= link_to deck.title, deck %></h3>
               <p><%= deck.description %></p>
               <p><%= deck.language.lingua %> | <%= deck.category.label %></p>
-              <p><%= link_to 'Edit', edit_deck_path(deck) %> | <%= link_to 'Destroy', deck, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+              <p><%= link_to 'Card List', deck_cards_path(deck) %> | <%= link_to 'Edit', edit_deck_path(deck) %> | <%= link_to 'Destroy', deck, method: :delete, data: { confirm: 'Are you sure?' } %></p>
             </tr>
           </tbody>
         </table>

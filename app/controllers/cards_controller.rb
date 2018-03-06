@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit, :update, :destroy]
-  before_action :set_deck, only: [:new, :create]
+  before_action :set_deck, only: [:index, :new, :create]
   # GET /cards
   # GET /cards.json
   def index
@@ -37,6 +37,7 @@ class CardsController < ApplicationController
 
   # GET /cards/new
   def new
+    @deck = Deck.find(params[:deck_id])
     @card = Card.new
   end
 
@@ -92,7 +93,7 @@ class CardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:original, :target, :language)
+      params.require(:card).permit(:original, :target, :language_id)
     end
 
     def set_deck

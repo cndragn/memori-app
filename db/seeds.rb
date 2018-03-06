@@ -12,8 +12,12 @@ Language.create(lingua: "Spanish", code: "es")
 
 Category.create(label: "Greetings")
 Category.create(label: "Food")
+Category.create(label: "Places")
 
 Deck.create(title: "Greetings", description: "How to talk to people", category_id: 1, user_id: 1, language_id: 1)
 Deck.create(title: "Courtesy", description: "Be kind, Rewind", category_id: 1, user_id: 1, language_id: 1 )
 Deck.create(title: "Food", description: "Gotta eat sometime!", category_id: 2, user_id: 1, language_id: 1)
 Deck.create(title: "Cuisine", description: "Stuff that goes on the fancy menu", category_id: 2, user_id: 1, language_id: 1)
+
+Card.create(original: "hello",target: "hola", language: "", deck_id: 1, language_id: 1)
+Card.create(original: "bye",target: "adios", language: "", deck_id: 1, language_id: 1)
