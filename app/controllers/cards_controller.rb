@@ -18,8 +18,6 @@ class CardsController < ApplicationController
   def new
     @deck = Deck.find(params[:deck_id])
     @card = Card.new
-    text = Card.last
-    text.update(target: "HALP!")
   end
 
   # GET /cards/1/edit
