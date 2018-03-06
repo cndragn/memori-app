@@ -5,6 +5,9 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @decks = Deck.all
+
+
   end
 
   # GET /users/1
@@ -12,7 +15,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @decks = Deck.all
-
     @mydecks = Deck.where(user_id: @user)
 
   end
