@@ -23,10 +23,11 @@
         <%= form.text_field :original, id: :card_original %>
       </div>
 
-      <div class="field">
+      <!-- <div class="field">
         <%= form.label :target %>
-        <%= form.text_field :target, id: :card_target %>
-      </div>
+        <% @halp = @deck %>
+        <%= form.text_field ":target", id: :card_target, :value => @translation %>
+      </div> -->
 
       <div class="field">
         <!-- <%= form.label :language_id %> -->
