@@ -8,6 +8,9 @@
         <br>
         <a href="/register" class="waves-effect waves-light btn yellow lighten-1 black-text">Sign up</a>
       </div>
+
+
+
     </li>
     <li><%= image_tag "background2-dark.jpg"  %>
       <div class="caption left-align">
@@ -40,7 +43,17 @@
   </div>
 </div>
 
-  <div class="col s12 m4 l4 center">
+<fb:login-button scope="public_profile,email,user_friends"
+  onlogin="checkLoginState();">
+</fb:login-button>
+<!-- <div class="fb-login-button" data-width="30" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div> -->
+<%= link_to 'Token Transfer', facebook_path,
+  id: 'token-transfer-link' %><br>
+<%= link_to 'Real Login', facebook_path,
+  id: 'login-link' %>
+
+
+  <div class="col s4 center">
     <div class="card-panel">
     <i class="large material-icons">video_library</i><h3>Demo</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
