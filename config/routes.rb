@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :scores
   resources :cards
   root 'page#index'
+  get '/facebook' => 'facebook#token'
 
   get '/secret' => 'page#secret'
 
