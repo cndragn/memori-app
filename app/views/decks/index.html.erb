@@ -25,6 +25,7 @@
         <table>
           <tbody>
             <tr>
+              <%= link_to( ("<i class='material-icons'>play_circle_outline</i>").html_safe, deck, { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
               <h3><%= link_to deck.title, deck %></h3>
               <p><%= deck.description %></p>
               <p><%= deck.language.lingua %> | <%= deck.category.label %></p>
