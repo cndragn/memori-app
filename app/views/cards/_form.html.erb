@@ -1,29 +1,29 @@
 <%= form_for([deck, card]) do |form| %>
-  <% if card.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(card.errors.count, "error") %> prohibited this card from being saved:</h2>
+<% if card.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(card.errors.count, "error") %> prohibited this card from being saved:</h2>
 
-      <ul>
-      <% card.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% card.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-  <div class="container">
-    <div class="row">
-      <div class="panel-card">
+<div class="container">
+  <div class="row">
+    <div class="panel-card">
       <div class="col s12 m6 l6">
 
         <h1>New Cards</h1>
 
-      <div class="field">
-        <%= form.label :original %>
-        <%= form.text_field :original, id: :card_original %>
-      </div>
+        <div class="field">
+          <%= form.label :original %>
+          <%= form.text_field :original, id: :card_original %>
+        </div>
 
-      <!-- <div class="field">
+        <!-- <div class="field">
         <%= form.label :target %>
         <% @halp = @deck %>
         <%= form.text_field ":target", id: :card_target, :value => @translation %>
@@ -32,6 +32,10 @@
       <div class="field">
         <!-- <%= form.label :language_id %> -->
         <%= form.hidden_field :language_id, id: :card_language_id, :value => @deck.language_id %>
+        <%= form.hidden_field :level, id: :card_level, :value => 0 %>
+        <%= form.hidden_field :correct, id: :card_correct, :value => 0 %>
+        <%= form.hidden_field :wrong, id: :card_wrong, :value => 0 %>
+        <%= form.hidden_field :review, id: :card_review, :value => 0 %>
       </div>
 
       <div class="actions">
