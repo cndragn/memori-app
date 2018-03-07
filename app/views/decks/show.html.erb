@@ -5,6 +5,10 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
 
+  <p><%= link_to 'Study Deck', deck_study_path(@deck) %></p>
+  <p><%= link_to 'Review Card', deck_review_path(@deck) %></p>
+  <p><%= link_to 'Wrong Answer', deck_incorrect_path(@deck) %></p>
+
 <table><tr><td>
 
     <div class="flip-container">
