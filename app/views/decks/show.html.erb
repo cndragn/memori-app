@@ -4,6 +4,12 @@
   <%= image_tag "LogoM.png", :class => "image2" %>
 </div>
 <div class="container">
+
+  <p><%= link_to 'Study Deck', deck_study_path(@deck) %></p>
+  <p><%= link_to 'Review Card', deck_review_path(@deck) %></p>
+  <p><%= link_to 'Wrong Answer', deck_incorrect_path(@deck) %></p>
+
+  
   <div class="row">
     <div class="col s12 m4 l4">
       <div class="card-panel">

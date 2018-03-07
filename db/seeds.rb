@@ -32,7 +32,7 @@ Deck.create(title: "Health", description: "Body Stuffs", category_id: 4, user_id
 
 Deck.create(title: "Food", description: "Spanish dishes", category_id: 2, user_id: 3, language_id: 1)
 Deck.create(title: "Weather", description: "The stuff small talk is made of", category_id: 5, user_id: 3, language_id: 1)
-Deck.create(title: "Numbers", description: "Counting from 1 to 10", category_id: 6, user_id: 3, language_id: 1)
+Deck.create(title: "Numbers", description: "One ha ha ha! \n Two ha ha ha!", category_id: 6, user_id: 3, language_id: 1)
 Deck.create(title: "Travel", description: "Trains, Planes and Automobiles", category_id: 7, user_id: 3, language_id: 1)
 
 
