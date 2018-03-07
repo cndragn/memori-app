@@ -2,7 +2,7 @@
   <div class="nav-wrapper white">
 
     <!-- <a href="#!" class="brand-logo left black-text"> -->
-    <a href="#" class="brand-logo left">
+    <a href="#" class="brand-logo left hide-on-small-only">
     <img class="responsive-img" src="/assets/logo4.png" alt="Logo4">
   </a>
       <!-- <%= image_tag "logo4.png" %> -->
@@ -15,6 +15,7 @@
       <% else %>
         <li><%= link_to 'Login', login_path %></li>
         <li><%= link_to 'Sign up', register_path %></li>
+
       <% end %>
     </ul>
       <ul class="side-nav" id="mobile-demo">
@@ -25,6 +26,9 @@
         <% else %>
           <li><%= link_to 'Login', login_path %></li>
           <li><%= link_to 'Sign up', register_path %></li>
+          <li><%= link_to 'Demo', register_path %></li>
+          <li><%= link_to 'Read more', register_path %></li>
+          <li><%= link_to 'About us', register_path %></li>
         <% end %>
       </ul>
   </div>
