@@ -2,7 +2,10 @@
 // All this logic will automatically be available in application.js.
 
 $(document).ready(function () {
-  $('.flipButton').bind("click", function() {
+  $('.flipButton1').bind("click", function() {
+    $(this).prev().toggleClass('hover');
+  })
+  $('.flipButton2').bind("click", function() {
     $(this).prev().toggleClass('hover');
   })
 });
