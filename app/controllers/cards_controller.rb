@@ -18,8 +18,6 @@ class CardsController < ApplicationController
   def new
     @deck = Deck.find(params[:deck_id])
     @card = Card.new
-    text = Card.last
-    text.update(target: "HALP!")
   end
 
   # GET /cards/1/edit
@@ -77,7 +75,7 @@ class CardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:original, :target, :language_id)
+      params.require(:card).permit(:original, :target, :language_id, :level, :correct, :wrong, :review)
     end
 
     def set_deck
