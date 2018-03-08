@@ -5,6 +5,8 @@ class DecksController < ApplicationController
   # GET /decks.json
   def index
     @decks = Deck.all
+    @user = User.find(params[:user_id])
+    @mydecks = Deck.where(user_id: @user)
   end
 
   # GET /decks/1
