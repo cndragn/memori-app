@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit, :update, :destroy]
-  before_action :set_deck, only: [:index, :new, :create]
+  before_action :set_deck, only: [:index, :new, :show, :create, :destroy]
   # before_action :api, only: [:new]
   # GET /cards
   # GET /cards.json
@@ -60,9 +60,10 @@ class CardsController < ApplicationController
   # DELETE /cards/1
   # DELETE /cards/1.json
   def destroy
+    @card = @deck.cards.find(params[:id])
     @card.destroy
     respond_to do |format|
-      format.html { redirect_to cards_url, notice: 'Card was successfully destroyed.' }
+      format.html { redirect_to deck_cards_path(@deck), notice: 'Card was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

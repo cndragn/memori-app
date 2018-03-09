@@ -1,6 +1,6 @@
 class DecksController < ApplicationController
   before_action :set_deck, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_user, only: [:destroy]
   # GET /decks
   # GET /decks.json
   def index
@@ -64,9 +64,10 @@ class DecksController < ApplicationController
   # DELETE /decks/1
   # DELETE /decks/1.json
   def destroy
+    @deck = @user.decks.find(params[:id])
     @deck.destroy
     respond_to do |format|
-      format.html { redirect_to decks_url, notice: 'Deck was successfully destroyed.' }
+      format.html { redirect_to user_decks_path(@user), notice: 'Deck was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -80,5 +81,9 @@ class DecksController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def deck_params
       params.require(:deck).permit(:language, :title, :description, :category_id, :user_id, :language_id)
+    end
+
+    def set_user
+      @user = User.find(params[:user_id])
     end
 end

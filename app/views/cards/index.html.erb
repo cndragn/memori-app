@@ -23,7 +23,7 @@
         <td><%= card.original %></td>
         <td><%= card.target %></td>
         <td><%= card.language %></td>
-        <td><%= link_to 'Delete', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', [@deck, card], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
