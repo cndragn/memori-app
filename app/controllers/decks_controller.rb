@@ -45,9 +45,12 @@ class DecksController < ApplicationController
   # PATCH/PUT /decks/1
   # PATCH/PUT /decks/1.json
   def update
+    @user = current_user
+
     respond_to do |format|
       if @deck.update(deck_params)
-        format.html { redirect_to @deck, notice: 'Deck was successfully updated.' }
+        # format.html { redirect_to @deck, notice: 'Deck was successfully updated.' }
+        format.html { redirect_to user_decks_path(@user), notice: 'Deck was successfully updated.' }
         format.json { render :show, status: :ok, location: @deck }
       else
         format.html { render :edit }
