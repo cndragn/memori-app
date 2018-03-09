@@ -26,6 +26,7 @@ end
     resources :cards
     get 'study'
     get 'review'
+    post 'review'
     get 'incorrect'
   end
 

@@ -1,1 +1,23 @@
 <h1>Study Deck</h1>
+
+<p><%= @question %></p>
+
+
+<%= form_for(@deck, url: { action: 'review' }) do |form| %>
+<%= form.text_field :user_answer %>
+<%= form.submit %>
+<% end %>
+
+
+<div class="input_field">
+  <p>Your Answer:<br>
+
+  </p>
+</div>
+
+<div class="actions">
+
+</div>
+
+
+<p><%= @answer %></p>

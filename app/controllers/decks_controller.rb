@@ -64,6 +64,15 @@ class DecksController < ApplicationController
     end
   end
 
+  def study
+    @deck = params[:deck_id]
+    @cards = Card.where(deck_id: @deck)
+    @terms = @cards.each do |term| p term end
+    @question = @terms.sample.original
+    @user_answer = params[:user_answer]
+    @answer = Card.where(original: @question).first.target
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_deck
@@ -72,6 +81,6 @@ class DecksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def deck_params
-      params.require(:deck).permit(:language, :title, :description, :category_id, :user_id, :language_id)
+      params.require(:deck).permit(:language, :title, :description, :category_id, :user_id, :language_id, :user_answer)
     end
 end

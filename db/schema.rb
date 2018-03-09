@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20180306023055) do
     t.string "language"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "deck_id"
+    t.integer "deck_id"
     t.integer "language_id"
     t.integer "level"
     t.integer "correct"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20180306023055) do
     t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_id"
+    t.integer "user_id"
     t.integer "language_id"
     t.index ["category_id"], name: "index_decks_on_category_id"
     t.index ["language_id"], name: "index_decks_on_language_id"
