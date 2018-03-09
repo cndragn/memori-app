@@ -16,7 +16,6 @@ class CardsController < ApplicationController
 
   # GET /cards/new
   def new
-    @deck = Deck.find(params[:deck_id])
     @card = Card.new
   end
 
@@ -34,7 +33,8 @@ class CardsController < ApplicationController
 
     respond_to do |format|
       if @card.save
-        format.html { redirect_to @card, notice: 'Card was successfully created.' }
+        # format.html { redirect_to @card, notice: 'Card was successfully created.' }
+        format.html { redirect_to deck_cards_path(@deck), notice: 'Card was succesfully created.'}
         format.json { render :show, status: :created, location: @card }
       else
         format.html { render :new }
@@ -75,7 +75,7 @@ class CardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:original, :target, :language_id, :level, :correct, :wrong, :review)
+      params.require(:card).permit(:original, :target, :language_id, :deck_id, :level, :correct, :wrong, :review)
     end
 
     def set_deck
