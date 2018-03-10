@@ -7,7 +7,14 @@ class DecksController < ApplicationController
     @decks = Deck.all
     @user = User.find(params[:user_id])
     @mydecks = Deck.where(user_id: @user)
-  end
+
+    term = params[:term]
+    return if term.blank? # matches nil and ""
+
+    deckstitle = @mydecks.where("title like ?", "%#{params[:term]}%")
+    decksdescr = @mydecks.where("description like ?", "%#{params[:term]}%")
+    @results = deckstitle + decksdescr
+end
 
   # GET /decks/1
   # GET /decks/1.json
@@ -80,7 +87,7 @@ class DecksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def deck_params
-      params.require(:deck).permit(:language, :title, :description, :category_id, :user_id, :language_id)
+      params.require(:deck).permit(:language, :title, :description, :category_id, :user_id, :language_id, :term)
     end
 
     def set_user

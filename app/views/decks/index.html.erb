@@ -23,6 +23,23 @@
     </div>
     <br>
     <br>
+    <h5>Search</h5>
+    <%= form_tag(user_decks_path, method: :get) do %>
+      <%= search_field_tag :term %>
+      <%= submit_tag 'Search!' %>
+    <% end %>
+
+    <% if @results.nil? # no search %>
+      Search for whatever you'd like.
+
+    <% elsif @results.empty? # no results %>
+      No matching results.
+
+    <% else %>
+      <% @results.each do |result| %>
+        <p><%= link_to result.title, result %></p>
+      <% end %>
+    <% end %>
 
 
   <div class="col s12">
