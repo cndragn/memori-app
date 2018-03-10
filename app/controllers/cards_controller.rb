@@ -1,32 +1,11 @@
 class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit, :update, :destroy]
-  before_action :set_deck, only: [:new, :create]
+  before_action :set_deck, only: [:index, :new, :create]
+  # before_action :api, only: [:new]
   # GET /cards
   # GET /cards.json
   def index
     @cards = Card.all
-
-    key = '55359353dedf4958bf05995dff13eb9d'
-
-    host = 'https://api.microsofttranslator.com'
-    path = '/V2/Http.svc/Translate'
-
-    target = 'es'
-    text = 'Hello'
-
-    params = '?to=' + target + '&text=' + CGI.escape(text)
-    uri = URI (host + path + params)
-
-    request = Net::HTTP::Get.new(uri)
-    request['Ocp-Apim-Subscription-Key'] = key
-
-    response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
-        http.request (request)
-    end
-
-    doc = Nokogiri::XML(response.body)
-
-    @translation = doc.text
 
   end
 
@@ -37,6 +16,7 @@ class CardsController < ApplicationController
 
   # GET /cards/new
   def new
+    @deck = Deck.find(params[:deck_id])
     @card = Card.new
   end
 
@@ -48,6 +28,9 @@ class CardsController < ApplicationController
   # POST /cards.json
   def create
     @card = @deck.cards.new(card_params)
+    orig = @card.original
+    translation = CardService.api(orig)
+    @card.update(target: translation)
 
     respond_to do |format|
       if @card.save
@@ -92,7 +75,7 @@ class CardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:original, :target, :language)
+      params.require(:card).permit(:original, :target, :language_id, :level, :correct, :wrong, :review)
     end
 
     def set_deck

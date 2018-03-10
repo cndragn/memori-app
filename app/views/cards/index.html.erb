@@ -1,3 +1,8 @@
+<div class="imageresp">
+  <%= image_tag "header1.jpg", :class => "image1" %>
+  <%= image_tag "LogoM.png", :class => "image2" %>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Cards</h1>
@@ -28,6 +33,6 @@
 
 <br>
 
-<%= link_to 'New Card', new_card_path %>
+<%= link_to 'New Card', new_deck_card_path(@deck) %>
 
 <p><%= @translation %></p>

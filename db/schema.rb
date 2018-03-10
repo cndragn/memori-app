@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180304083559) do
+
+ActiveRecord::Schema.define(version: 20180306023055) do
 
   create_table "cards", force: :cascade do |t|
     t.string "original"
@@ -18,6 +19,12 @@ ActiveRecord::Schema.define(version: 20180304083559) do
     t.string "language"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "deck_id"
+    t.integer "language_id"
+    t.integer "level"
+    t.integer "correct"
+    t.integer "wrong"
+    t.integer "review"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -66,6 +73,10 @@ ActiveRecord::Schema.define(version: 20180304083559) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "provider"
+    t.string "uid"
+    t.string "oauth_token"
+    t.datetime "oauth_expires_at"
   end
 
 end

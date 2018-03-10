@@ -1,6 +1,6 @@
-<h1>Editing User</h1>
+<div class="imageresp">
+  <%= image_tag "header1.jpg", :class => "image1" %>
+  <%= image_tag "LogoM.png", :class => "image2" %>
+</div>
 
-<%= render 'form', user: @user %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<%= render 'editform', user: @user %>

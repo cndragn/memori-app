@@ -1,37 +1,20 @@
-  <div class="imageresp">
-    <%= image_tag "header_studydecks.png" %>
-    </div>
+<div class="imageresp">
+  <%= image_tag "header1.jpg", :class => "image1" %>
+  <%= image_tag "LogoM.png", :class => "image2" %>
+</div>
+
   </div>
   <br>
   <br>
   <div class="container">
 
     <p id="notice"><%= notice %></p>
+    <%= link_to 'Back', users_path %> |
+    <%= link_to 'New Deck', new_user_deck_path(current_user.id) %>
+    <h3>All studydecks</h3>
 
-
-  <nav class=>
-    <div class="nav-wrapper white black-text">
-      <form>
-        <div class="input-field">
-          <input id="search" type="search" required>
-          <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
-          <i class="material-icons black-text">close</i>
-        </div>
-      </form>
-    </div>
-  </nav>
-  <br>
-
-  <div class="row">
-    <div class="col s6 center">
-      <a class="waves-effect waves-light btn yellow lighten-2 black-text"><i class="material-icons left black-text">search</i>Language</a>
-    </div>
-    <div class="col s6 center">
-      <a class="waves-effect waves-light btn yellow lighten-2 black-text"><i class="material-icons left black-text">search</i>Category</a>
-    </div>
-  </div>
-
-  <p><%= link_to 'New Deck', new_user_deck_path(current_user.id) %></p>
+    <br>
+    <br>
 
 
   <div class="row">
@@ -42,10 +25,11 @@
         <table>
           <tbody>
             <tr>
+              <%= link_to( ("<i class='material-icons'>play_circle_outline</i>").html_safe, deck, { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
               <h3><%= link_to deck.title, deck %></h3>
               <p><%= deck.description %></p>
               <p><%= deck.language.lingua %> | <%= deck.category.label %></p>
-              <p><%= link_to 'Edit', edit_deck_path(deck) %> | <%= link_to 'Destroy', deck, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+              <p><%= link_to 'Card List', deck_cards_path(deck) %> | <%= link_to 'Edit', edit_deck_path(deck) %> | <%= link_to 'Destroy', deck, method: :delete, data: { confirm: 'Are you sure?' } %></p>
             </tr>
           </tbody>
         </table>

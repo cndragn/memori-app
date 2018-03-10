@@ -1,23 +1,44 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
- @import "materialize";
- @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
-.imageresp img {
+
+.imageresp {
+  position: relative;
+  height: 200px;
+}
+
+.image1 {
+  position: relative;
   width: 100%;
-  height: auto;
+  height: 200px;
+}
+
+.image2 {
+  position: absolute;
+      top: 50%;  /* position the top  edge of the element at the middle of the parent */
+      left: 50%; /* position the left edge of the element at the middle of the parent */
+
+      transform: translate(-50%, -50%); /* This is a shorthand of
+                                           translateX(-50%) and translateY(-50%) */
+}
+
+select {
+  display: block;
+  margin-bottom: 30px;
 }

@@ -1,3 +1,202 @@
 // Place all the styles related to the decks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* entire container, keeps perspective */
+.flipButton1 {
+  text-align:center;
+  width: 500px;
+
+}
+.flip-container-1 {
+  -webkit-perspective: 500;
+  -moz-perspective: 500;
+  -o-perspective: 500;
+  perspective: 500;
+
+	border: 1px solid #ccc;
+}
+
+/*	.flip-container:hover .flipper,  */
+
+  .flip-container-1.hover .flipper {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+.flip-container-1, .front1, .back1 {
+	width: 500px;
+	height: 350px;
+}
+.flipButton2 {
+  text-align:center;
+  width: 250px;
+
+}
+.flip-container-2 {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+
+	border: 1px solid #ccc;
+}
+
+/*	.flip-container:hover .flipper,  */
+
+  .flip-container-2.hover .flipper {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+.flip-container-2, .front2, .back2 {
+	width: 250px;
+	height: 250px;
+}
+
+.flipper {
+	-webkit-transition: 0.5s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.5s;
+	-moz-transform-style: preserve-3d;
+
+  -o-transition: 0.5s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.5s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front1, .front2, .back1, .back2 {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front1, .front2 {
+	background-color: black;
+	z-index: 2;
+	color: white;
+}
+
+.back1, .back2 {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	background-color: grey;
+}
+
+// .front .name {
+// 	font-size: 2em;
+// 	display: inline-block;
+// 	background: rgba(33, 33, 33, 0.9);
+// 	color: #f8f8f8;
+// 	font-family: Courier;
+// 	padding: 5px 10px;
+// 	border-radius: 5px;
+// 	bottom: 10px;
+// 	left: 14%;
+// 	position: absolute;
+// 	text-shadow: 0.1em 0.1em 0.05em #333;
+// /*
+// 	-webkit-transform: rotate(-20deg);
+// 	-moz-transform: rotate(-20deg);
+//   -o-transform: rotate(-20deg);
+// 	transform: rotate(-20deg);
+// */
+// }
+
+.back-logo {
+	position: absolute;
+	top: 20px;
+	left: 45px;
+	width: 160px;
+	height: 117px;
+	background-color: yellow;
+}
+
+.back-title {
+	font-weight: bold;
+	color: #00304a;
+	position: absolute;
+	top: 180px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+	font-family: Courier;
+	font-size: 2em;
+
+}
+
+.back p {
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding: 0 20px;
+  font-family: arial;
+  line-height: 2em;
+}
+
+.name {
+ 	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+}
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+	/*position: relative;*/
+	padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  /*float: left;*/
+	border-radius: 10px;
+	font-family: 'Pacifico', cursive;
+	font-size: 20px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.blue
+{
+	background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	text-shadow: 0px -2px #2980B9;
+}
+
+.yellow
+{
+	background-color: #F2CF66;
+	border-bottom: 5px solid #D1B358;
+	// text-shadow: 0px -2px #D1B358;
+	color: black;
+}
+
+.action-button:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
