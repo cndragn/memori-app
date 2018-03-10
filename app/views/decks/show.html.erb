@@ -1,29 +1,79 @@
-<p id="notice"><%= notice %></p>
 <div class="imageresp">
   <%= image_tag "header1.jpg", :class => "image1" %>
   <%= image_tag "LogoM.png", :class => "image2" %>
 </div>
+<p id="notice"><%= notice %></p>
 <div class="container">
-  <div class="row">
-    <div class="col s12 m4 l4">
-      <div class="card-panel">
+
+  <p><%= link_to 'Study Deck', deck_study_path(@deck) %></p>
+  <p><%= link_to 'Review Card', deck_review_path(@deck) %></p>
+  <p><%= link_to 'Wrong Answer', deck_incorrect_path(@deck) %></p>
+
+<table><tr><td>
+
+          <div class="flip-container-1 hide-on-small-only">
+      <div class="flipper">
+        <div class="front1">
+          <h3>FRONT</h3>
+        </div>
+        <div class="back1">
+          <h3>BACK</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="flipButton1 action-button shadow animate yellow hide-on-small-only">Submit</div>
+
+
+
+
+  </td></tr></table>
+
+  <table><tr><td>
+
+      <div class="flip-container-2 hide-on-med-and-up">
+        <div class="flipper">
+          <div class="front2">
+            <h3>FRONT</h3>
+          </div>
+          <div class="back2">
+            <h3>BACK</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="flipButton2 action-button shadow animate yellow hide-on-med-and-up">Submit</div>
+
+
+
+    </td></tr></table>
+
+</div>
+
+
+
+<!-- show the info of the deck -->
+
+<!-- <div class="row">
+  <div class="col s12 m4 l4">
+    <div class="card-panel">
 <h3>
-  <%= @deck.title %>
+<%= @deck.title %>
 </h3>
 
 <p>
-  <strong>Language:</strong>
-  <%= @deck.language %>
+<strong>Language:</strong>
+<%= @deck.language %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @deck.description %>
+<strong>Description:</strong>
+<%= @deck.description %>
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @deck.category %>
+<strong>Category:</strong>
+<%= @deck.category %>
 </p>
 
 <%= link_to 'Add cards', new_deck_card_path(@deck) %> |
@@ -32,5 +82,4 @@
 
 </div>
 </div>
-</div>
-</div>
+</div> -->

@@ -32,5 +32,10 @@ end
 
   resources :decks do
     resources :cards
+    get 'study'
+    get 'review'
+    get 'incorrect'
   end
+
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

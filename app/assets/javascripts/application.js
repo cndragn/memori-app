@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
 //= require materialize
 
@@ -49,3 +48,4 @@ $(document).ready(function(){
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 </body>
 </html>
+
