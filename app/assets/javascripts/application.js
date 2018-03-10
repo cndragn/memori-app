@@ -14,6 +14,7 @@
 //= require rails-ujs
 //= require_tree .
 //= require materialize
+//= require turbolinks
 
 $(document).ready(function(){
   $('.slider').slider();
@@ -48,4 +49,3 @@ $(document).ready(function(){
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 </body>
 </html>
-

@@ -10,7 +10,17 @@
 
       <div class="col s12 m6 l6 center">
         <div class="card-panel yellow lighten-2">
-            <%= link_to( ("<i class='material-icons'>add</i>").html_safe, new_user_deck_path(current_user.id), { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
+            <%= link_to( ("<i class='material-icons'>add</i>").html_safe, new_user_deck_path(current_user.id), { :class=>"btn-floating btn-large waves-effect waves-light black", :remote => true }) %>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
+              </div>
+            </div>
           <h3>CREATE</h3>
         <p>Create your own studydeck with the words you want to learn</p>
         </div>
