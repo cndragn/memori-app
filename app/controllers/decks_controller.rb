@@ -21,6 +21,7 @@ end
   def show
     @user = current_user
   end
+  
 
   # GET /decks/new
   def new
