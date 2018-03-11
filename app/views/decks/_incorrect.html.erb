@@ -1,0 +1,71 @@
+<br>
+
+<!-- Desktop view -->
+<div class="container center hide-on-small-only">
+  <div class="row">
+    <div class="col s12 m12 l12">
+      <div class="card-panel yellow lighten-2">
+        <br>
+        <i class="material-icons red-text large">clear</i>
+      <br>
+      <h3 style="font-weight:bold;">INCORRECT</h3>
+      <br>
+      <br>
+      <br>
+      <br>
+<div class="row">
+
+  <div class="col s4 m4 l4">
+      <%= link_to( ("<i class='material-icons'>edit</i>").html_safe, deck_review_url, { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
+      <h4>Try again</h4>
+
+    </div>
+
+  <div class="col s4 m4 l4">
+      <%= link_to( ("<i class='material-icons'>remove_red_eye</i>").html_safe, deck_review_url, { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
+      <h4>Review answer</h4>
+
+</div>
+  <div class="col s4 m4 l4">
+      <%= link_to( ("<i class='material-icons'>edit</i>").html_safe, deck_review_url, { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
+      <h4>Next word</h4>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile view -->
+<div class="container center hide-on-med-and-up">
+  <div class="row">
+    <div class="col s12 m12 l12">
+      <div class="card-panel yellow lighten-2">
+        <i class="material-icons red-text large">clear</i>
+        <h4 style="font-weight:bold;">INCORRECT</h4>
+      <br>
+<div class="row">
+
+  <div class="col s4 m4 l4">
+      <%= link_to( ("<i class='material-icons'>edit</i>").html_safe, deck_review_url, { :class=>"btn-floating btn-small waves-effect waves-light black" }) %>
+      <h5>Try again</h5>
+
+    </div>
+
+  <div class="col s4 m4 l4">
+      <%= link_to( ("<i class='material-icons'>remove_red_eye</i>").html_safe, deck_review_url, { :class=>"btn-floating btn-small waves-effect waves-light black" }) %>
+      <h5>Review answer</h5>
+
+</div>
+  <div class="col s4 m4 l4">
+      <%= link_to( ("<i class='material-icons'>edit</i>").html_safe, deck_review_url, { :class=>"btn-floating btn-small waves-effect waves-light black" }) %>
+      <h5>Next word</h5>
+
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+<br>
