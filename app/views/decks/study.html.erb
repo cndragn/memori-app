@@ -4,10 +4,8 @@
 <div class="container">
 <%= render 'decks/studyDesktop' %>
 <%= render 'decks/studyMobile' %>
-
-
-
-
-    <%= link_to 'Back', user_decks_path(@user) %>
-
+<br>
+<%= link_to 'Exit', user_decks_path(@user), { class: "waves-effect waves-light yellow btn"} %>
+<br>
+<br>
 </div>

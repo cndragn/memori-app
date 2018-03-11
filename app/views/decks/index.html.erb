@@ -2,34 +2,23 @@
 
 
   </div>
-  <br>
-  <br>
   <div class="container">
 
     <p id="notice"><%= notice %></p>
     <%= link_to 'Back', users_path %> |
     <%= link_to 'New Deck', new_user_deck_path(current_user.id), remote: true %>
     <!-- Modal Structure -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
-      </div>
-    </div>
     <br>
     <br>
-    <h5>Search</h5>
+    <br>
+    <i class="material-icons">search</i>
     <%= form_tag(user_decks_path, method: :get) do %>
       <%= search_field_tag :term %>
-      <%= submit_tag 'Search!' %>
+      <%= submit_tag 'Search!', {class: "waves-effect waves-light yellow black-text btn"} %>
     <% end %>
     <br>
 
     <% if @results.nil? # no search %>
-      Search for whatever you'd like.
 
     <% elsif @results.empty? # no results %>
       No matching results.
@@ -53,7 +42,7 @@
                       <%= link_to 'Destroy', [@user, deck], method: :delete, data: { confirm: 'Are you sure?' } %> |
                       <%= link_to 'Edit', edit_deck_path(deck), remote: true %> </p>
                       <!-- Modal Structure -->
-                      <div id="modal1" class="modal">
+                      <!-- <div id="modal1" class="modal">
                         <div class="modal-content">
                           <h4>Modal Header</h4>
                           <p>A bunch of text</p>
@@ -61,7 +50,7 @@
                         <div class="modal-footer">
                           <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
                         </div>
-                      </div>
+                      </div> -->
 
                   </tr>
                 </tbody>
@@ -75,11 +64,12 @@
       </div>
     <% end %>
 
+    <!-- Desktop view -->
 
-  <div class="col s12">
+  <div class="col s12 hide-on-small-only">
     <div class="card-panel yellow lighten-2">
       <div class="row">
-        <h3>My studydecks</h3>
+        <h4 style="text-align:center; font-weight:bold;">MY STUDYDECKS</h4>
 
         <% @mydecks.each do |deck| %>
         <div class="col s12 m6 l6 center">
@@ -94,16 +84,16 @@
                     <%= link_to 'Destroy', [@user, deck], method: :delete, data: { confirm: 'Are you sure?' } %> |
                     <%= link_to 'Edit', edit_deck_path(deck), remote: true %> </p>
                     <!-- Modal Structure -->
-                    <div id="modal1" class="modal">
+                    <!-- <div id="modal1" class="modal">
                       <div class="modal-content">
                         <h4>Modal Header</h4>
                         <p>A bunch of text</p>
                       </div>
                       <div class="modal-footer">
                         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-                        
+
                       </div>
-                    </div>
+                    </div> -->
 
                 </tr>
               </tbody>
@@ -115,4 +105,54 @@
       </div>
       </div>
     </div>
+
+<!-- Mobile view -->
+    <div class="col s12 hide-on-med-and-up">
+      <div class="card-panel yellow lighten-2">
+        <div class="row">
+          <h5 style="text-align:center; font-weight:bold;">MY STUDYDECKS</h5>
+
+          <% @mydecks.each do |deck| %>
+          <div class="col s12 m6 l6 center">
+            <div class="card-panel">
+              <table>
+                <tbody>
+                  <tr>
+                    <h5><%= link_to deck.title, deck %></h5>
+                    <p><%= deck.description %></p>
+                    <p><%= deck.language.lingua %> | <%= deck.category.label %></p>
+                    <p><%= link_to 'Card List', deck_cards_path(deck) %> |
+                      <%= link_to 'Destroy', [@user, deck], method: :delete, data: { confirm: 'Are you sure?' } %> |
+                      <%= link_to 'Edit', edit_deck_path(deck), remote: true %> </p>
+                      <!-- Modal Structure -->
+                      <!-- <div id="modal1" class="modal">
+                        <div class="modal-content">
+                          <h4>Modal Header</h4>
+                          <p>A bunch of text</p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+
+                        </div>
+                      </div> -->
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <% end %>
+
+        </div>
+        </div>
+      </div>
 </div> <!-- end of container -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
+  </div>
+</div>

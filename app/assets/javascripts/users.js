@@ -1,7 +1,7 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-$(document).on('turbolinks:load', function(){
+$(document).on('ready', function(){
   $(".button-collapse").sideNav();
   $(".slider").slider();
 });

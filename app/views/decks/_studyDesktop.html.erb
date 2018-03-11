@@ -1,6 +1,6 @@
 <!-- Desktop-view -->
 
-
+<br>
   <div class="flip-container-1 yellow lighten-3 black-text hide-on-small-only">
     <div class="flipper">
 
@@ -13,12 +13,15 @@
         <br>
         <h5>English World</h5>
         <h5>Your answer:</h5>
+        <%= search_field_tag :term %>
         <br>
         <br>
       </div>
 
       <div class="back1">
-        <i class="material-icons green-text large">check</i>
+        <!-- IF THE ANSWER IS RIGHT -->
+
+        <!-- <i class="material-icons green-text large">check</i>
         <br>
         <h3 style="font-weight:bold;">CORRECT</h3>
         <br>
@@ -29,10 +32,12 @@
         <br>
 
         <%= link_to( ("<i class='material-icons'>chevron_right</i>").html_safe, deck_study_url, { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
-        <br>
-      </div>
- <!-- IF THE ANSWER IS WRONG
+        <br> -->
 
+ <!-- IF THE ANSWER IS WRONG -->
+ <br>
+    <i class="material-icons red-text large">clear</i>
+<br>
       <br>
       <h3 style="font-weight:bold;">INCORRECT</h3>
       <br>
@@ -55,9 +60,10 @@
             <%= link_to( ("<i class='material-icons'>edit</i>").html_safe, deck_review_url, { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
             <h4>Next word</h4>
         </div>
-              </div>
-            -->
-            
+      </div>
+
+    </div>
+
     </div>
   </div>
 
