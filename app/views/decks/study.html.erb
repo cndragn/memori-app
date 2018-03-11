@@ -1,11 +1,17 @@
 <%= render 'layouts/imageheader' %>
 
+<h1>Study Deck</h1>
+
+<p><%= @question %></p>
+
+<%= form_for(@deck, url: { action:'review' }) do |form| %>
+<%= form.text_field :user_answer %>
+<%= form.hidden_field :correct_answer, :value => @answer  %>
+<%= form.submit %>
+<% end %>
+
+<p>Dev Notes - Correct Answer: <%= @answer %></p>
+
 <p id="notice"><%= notice %></p>
-<div class="container">
-<%= render 'decks/studyDesktop' %>
-<%= render 'decks/studyMobile' %>
-<br>
+
 <%= link_to 'Exit', user_decks_path(@user), { class: "waves-effect waves-light yellow btn"} %>
-<br>
-<br>
-</div>
