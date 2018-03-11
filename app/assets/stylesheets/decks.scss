@@ -192,3 +192,23 @@
   -webkit-transform: translate(0px,5px);
 	border-bottom: 1px solid;
 }
+
+.card-panel-2 {
+    transition: box-shadow .25s;
+    padding: 24px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+a:visited {
+    color: grey!important;
+}
+
+a {
+  color:black!important;
+}
+
+a.brand-logo:hover {
+    background-color: white!important;
+}
