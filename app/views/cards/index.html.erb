@@ -1,3 +1,8 @@
+<div class="imageresp">
+  <%= image_tag "header1.jpg", :class => "image1" %>
+  <%= image_tag "LogoM.png", :class => "image2" %>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Cards</h1>
@@ -18,9 +23,7 @@
         <td><%= card.original %></td>
         <td><%= card.target %></td>
         <td><%= card.language %></td>
-        <td><%= link_to 'Show', card %></td>
-        <td><%= link_to 'Edit', edit_card_path(card) %></td>
-        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', [@deck, card], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,6 +31,15 @@
 
 <br>
 
-<%= link_to 'New Card', new_deck_card_path(@deck) %>
-
+<%= link_to 'New Card', new_deck_card_path(@deck), remote: true %>
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>
 <p><%= @translation %></p>

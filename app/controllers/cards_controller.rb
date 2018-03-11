@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit, :update, :destroy]
-  before_action :set_deck, only: [:index, :new, :create]
+  before_action :set_deck, only: [:index, :new, :show, :create, :destroy]
   # before_action :api, only: [:new]
   # GET /cards
   # GET /cards.json
@@ -16,7 +16,6 @@ class CardsController < ApplicationController
 
   # GET /cards/new
   def new
-    @deck = Deck.find(params[:deck_id])
     @card = Card.new
   end
 
@@ -34,7 +33,8 @@ class CardsController < ApplicationController
 
     respond_to do |format|
       if @card.save
-        format.html { redirect_to @card, notice: 'Card was successfully created.' }
+        # format.html { redirect_to @card, notice: 'Card was successfully created.' }
+        format.html { redirect_to deck_cards_path(@deck), notice: 'Card was succesfully created.'}
         format.json { render :show, status: :created, location: @card }
       else
         format.html { render :new }
@@ -60,9 +60,10 @@ class CardsController < ApplicationController
   # DELETE /cards/1
   # DELETE /cards/1.json
   def destroy
+    @card = @deck.cards.find(params[:id])
     @card.destroy
     respond_to do |format|
-      format.html { redirect_to cards_url, notice: 'Card was successfully destroyed.' }
+      format.html { redirect_to deck_cards_path(@deck), notice: 'Card was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -75,7 +76,7 @@ class CardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:original, :target, :language_id, :level, :correct, :wrong, :review)
+      params.require(:card).permit(:original, :target, :language_id, :deck_id, :level, :correct, :wrong, :review)
     end
 
     def set_deck

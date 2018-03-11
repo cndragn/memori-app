@@ -2,11 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* entire container, keeps perspective */
-.flipButton {
+.flipButton1 {
   text-align:center;
+  width: 500px;
 
 }
-.flip-container {
+.flip-container-1 {
+  -webkit-perspective: 500;
+  -moz-perspective: 500;
+  -o-perspective: 500;
+  perspective: 500;
+
+	border: 1px solid #ccc;
+}
+
+/*	.flip-container:hover .flipper,  */
+
+  .flip-container-1.hover .flipper {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+.flip-container-1, .front1, .back1 {
+	width: 500px;
+	height: 350px;
+}
+.flipButton2 {
+  text-align:center;
+  width: 250px;
+
+}
+.flip-container-2 {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
   -o-perspective: 1000;
@@ -17,16 +45,16 @@
 
 /*	.flip-container:hover .flipper,  */
 
-  .flip-container.hover .flipper {
+  .flip-container-2.hover .flipper {
 		-webkit-transform: rotateY(180deg);
 		-moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
 		transform: rotateY(180deg);
 	}
 
-.flip-container, .front, .back {
-	width: 500px;
-	height: 350px;
+.flip-container-2, .front2, .back2 {
+	width: 250px;
+	height: 250px;
 }
 
 .flipper {
@@ -45,7 +73,7 @@
 	position: relative;
 }
 
-.front, .back {
+.front1, .front2, .back1, .back2 {
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -56,13 +84,13 @@
 	left: 0;
 }
 
-.front {
+.front1, .front2 {
 	background-color: black;
 	z-index: 2;
 	color: white;
 }
 
-.back {
+.back1, .back2 {
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);

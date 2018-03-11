@@ -1,5 +1,11 @@
 
+
 <div class="slider">
+<div class="imageresp hide-on-med-and-up">
+  <%= image_tag "header1.jpg", :class => "image1" %>
+  <%= image_tag "LogoM.png", :class => "image2" %>
+</div>
+<div class="slider hide-on-small-only">
   <ul class="slides">
     <li><%= image_tag "background-dark.jpg" %>
       <div class="caption center-align">
@@ -8,10 +14,8 @@
         <br>
         <a href="/register" class="waves-effect waves-light btn yellow lighten-1 black-text">Sign up</a>
       </div>
-
-
-
     </li>
+
     <li><%= image_tag "background2-dark.jpg"  %>
       <div class="caption left-align">
         <h3>IMPROVE AND UPDATE</h3>
@@ -33,25 +37,35 @@
 </div>
 <br>
 <br>
+<div class="row">
+  <div class="col s12 center">
+    <a href="/login" class="waves-effect waves-light btn yellow lighten-1 black-text hide-on-med-and-up startbutton">Login</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12 center">
+    <a href="/register" class="waves-effect waves-light btn yellow lighten-1 black-text hide-on-med-and-up startbutton">Sign up</a>
+  </div>
+</div>
+<br>
 
 <div class="row">
 
   <div class="col s12 m4 l4 center">
     <div class="card-panel">
-    <i class="large material-icons center-align">check_circle</i><h3>Read more</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
-</div>
-
-
-
-  <div class="col s4 center">
-    <div class="card-panel">
     <i class="large material-icons">video_library</i><h3>Demo</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
 </div>
-  <div class="col s12 m4 l4 center">
+
+<div class="col s12 m4 l4 center hide-on-small-only">
+  <div class="card-panel">
+  <i class="large material-icons center-align">check_circle</i><h3>Read more</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</div>
+
+  <div class="col s12 m4 l4 center hide-on-small-only">
     <div class="card-panel">
       <i class="large material-icons">person</i><h3>About</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

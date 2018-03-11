@@ -2,7 +2,7 @@
   <div class="nav-wrapper white">
 
     <!-- <a href="#!" class="brand-logo left black-text"> -->
-    <a href="#" class="brand-logo left">
+    <a href="#" class="brand-logo left hide-on-small-only">
     <img class="responsive-img" src="/assets/logo4.png" alt="Logo4">
   </a>
       <!-- <%= image_tag "logo4.png" %> -->
@@ -15,17 +15,31 @@
       <% else %>
         <li><%= link_to 'Login', login_path %></li>
         <li><%= link_to 'Sign up', register_path %></li>
+
       <% end %>
     </ul>
       <ul class="side-nav" id="mobile-demo">
+        <li>
+          <div class="imageresp">
+            <%= image_tag "header1.jpg", :class => "image1" %>
+            <%= image_tag "LogoM.png", :class => "image2" %>
+          </div>
+        </li>
         <% if current_user %>
           <li>Signed in as <%= current_user.name %> </li>
           <li><%= link_to "My profile", current_user %></li>
           <li><%= link_to "Logout", logout_path %></li>
+          <li><%= link_to "My decks", user_decks_path(current_user.id) %></li>
+
         <% else %>
           <li><%= link_to 'Login', login_path %></li>
           <li><%= link_to 'Sign up', register_path %></li>
+          <li><%= link_to 'Read more'  %></li>
+          <li><%= link_to 'About us' %></li>
         <% end %>
+        <li>
+
+        </li>
       </ul>
   </div>
 </nav>
