@@ -1,0 +1,21 @@
+<h1>Study Deck</h1>
+
+<p><% params %></p>
+
+
+<%= form_for :card, :controller => :cards, :action => 'check_answer' do |form| %>
+
+<%= form.submit "Submit Answer" %>
+<% end %>
+
+
+<div class="input_field">
+  <p>Your Answer:<br>
+
+  </p>
+</div>
+
+
+
+
+<p><%= @answer %></p>
