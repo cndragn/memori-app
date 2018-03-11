@@ -1,44 +1,37 @@
 <!-- Desktop-view -->
 
-<div class="container center hide-on-small-only">
-  <div class="row">
-    <div class="col s12 m12 l12">
-      <div class="card-panel yellow lighten-2">
 
-      <i class="material-icons green-text large">edit</i>
-      <br>
-      <h3 style="font-weight:bold;">Word to translate:</h3>
-      <br>
-      <h5>English World</h5>
-      <h5>Your answer:</h5>
-      <br>
-      <br>
-      <br>
+  <div class="flip-container-1 yellow lighten-3 black-text hide-on-small-only">
+    <div class="flipper">
+
+      <div class="front1">
+        <br>
+        <i class="material-icons black-text large">edit</i>
+        <br>
+        <br>
+        <h3 style="font-weight:bold;">Word to translate:</h3>
+        <br>
+        <h5>English World</h5>
+        <h5>Your answer:</h5>
+        <br>
+        <br>
+      </div>
+
+      <div class="back1">
+        <i class="material-icons green-text large">check</i>
+        <br>
+        <h3 style="font-weight:bold;">CORRECT</h3>
+        <br>
+        <br>
+        <h5>English World</h5>
+        <h5>Spanish Word</h5>
+        <br>
+        <br>
+
+        <%= link_to( ("<i class='material-icons'>chevron_right</i>").html_safe, deck_study_url, { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
+        <br>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Mobile-view -->
-<div class="container center hide-on-med-and-up">
-  <div class="row">
-    <div class="col s12 m12 l12">
-      <div class="card-panel yellow lighten-2">
-
-      <i class="material-icons green-text large">check</i>
-      <br>
-      <h4 style="font-weight:bold;">CORRECT</h4>
-      <br>
-      <br>
-      <h5>English World</h5>
-      <h5>Spanish Word</h5>
-      <br>
-      <br>
-
-      <%= link_to( ("<i class='material-icons'>chevron_right</i>").html_safe, deck_review_url, { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
-      <h5>Next word</h5>
-      <br>
-      </div>
-    </div>
-  </div>
-</div>
+  <div class="flipButton1 action-button shadow animate green hide-on-small-only">Submit</div>
