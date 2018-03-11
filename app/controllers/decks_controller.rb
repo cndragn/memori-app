@@ -79,6 +79,23 @@ end
     end
   end
 
+  def study
+    @deck = params[:deck_id]
+    @cards = Card.where(deck_id: @deck)
+    @terms = @cards.each do |term| p term end
+    @question = @terms.sample.original
+    @answer = Card.where(original: @question).first.target
+  end
+
+  def review
+    @deck = params[:deck_id].to_s
+    @user_answer = params[@deck][:user_answer]
+    @correct_answer = params[@deck][:correct_answer]
+  end
+
+  def check_answer
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_deck
@@ -87,10 +104,9 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def deck_params
-      params.require(:deck).permit(:language, :title, :description, :category_id, :user_id, :language_id, :term)
+      params.require(:deck).permit(:language, :title, :description, :category_id, :user_id, :language_id, :user_answer, :correct_answer, :deck_id)
     end
 
-    def set_user
-      @user = User.find(params[:user_id])
+    def study_deck
     end
 end

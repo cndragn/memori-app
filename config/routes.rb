@@ -31,9 +31,11 @@ Rails.application.routes.draw do
 end
 
   resources :decks do
-    resources :cards
+    resources :cards, :collection => {:check_answer => :post}
     get 'study'
+    post 'study'
     get 'review'
+    post 'review'
     get 'incorrect'
   end
 
