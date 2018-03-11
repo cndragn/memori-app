@@ -22,11 +22,6 @@ end
     @user = current_user
   end
 
-  def study
-    @user = current_user
-
-  end
-
   # GET /decks/new
   def new
     @user = User.find(params[:user_id])

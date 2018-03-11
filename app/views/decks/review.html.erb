@@ -1,10 +1,44 @@
-<h1>Review Answer</h1>
-<h2>Correct!</h2>
-<p><%= @correct_answer %></p>
-<p><%= @user_answer %></p>
-<h2>or if wrong... nada</h2>
+<%= render 'layouts/imageheader' %>
 
-<h3>English World</h3>
-<h3>Spanish Word</h3>
+<!-- Desktop-view -->
+<br>
+<div class="container center hide-on-small-only">
+  <div class="row">
+    <div class="card-panel">
 
-<h4>Continue to Next Word</h4>
+
+        <i class="material-icons green-text large">check</i>
+        <br>
+        <h3 style="font-weight:bold;">CORRECT</h3>
+        <br>
+        <br>
+        <h5>The right answer: <%= @correct_answer %></h5>
+        <h5>Your answer: <%= @user_answer %></h5>
+        <br>
+        <br>
+
+        <%= link_to( ("<i class='material-icons'>chevron_right</i>").html_safe, deck_study_url, { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
+        <br>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile-view -->
+<div class="container center hide-on-med-and-up">
+  <div class="row">
+    <div class="card-panel">
+
+      <i class="material-icons green-text small">check</i>
+      <br>
+      <h5 style="font-weight:bold;">CORRECT</h5>
+      <br>
+      <br>
+      <h5>The right answer: <%= @correct_answer %></h5>
+      <h5>Your answer: <%= @user_answer %></h5>
+      <br>
+      <br>
+      <%= link_to( ("<i class='material-icons'>chevron_right</i>").html_safe, deck_study_url, { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
+      <br>
+    </div>
+  </div>
+</div>
