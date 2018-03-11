@@ -1,26 +1,11 @@
 <h1>Study Deck</h1>
 
 <p><%= @question %></p>
-<h1><%= @halp %></h1>
 
-
-
-<%= form_for("deck", :action => 'study', :url => 'study') do |form| %>
-<%= form.text_field :user_answer, :value => '' %>
-<%= form.hidden_field '@question' %>
+<%= form_for(@deck, url: { action:'review' }) do |form| %>
+<%= form.text_field :user_answer %>
+<%= form.hidden_field :correct_answer, :value => @answer  %>
 <%= form.submit %>
 <% end %>
 
-
-<div class="input_field">
-  <p>Your Answer:<br>
-
-  </p>
-</div>
-
-<div class="actions">
-
-</div>
-
-
-<p><%= @answer %></p>
+<p>Dev Notes - Correct Answer: <%= @answer %></p>
