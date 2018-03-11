@@ -4,16 +4,19 @@
   </div>
   <div class="container">
 
-    <%= link_to 'Back', users_path %> |
-    <%= link_to 'New Deck', new_user_deck_path(current_user.id), remote: true %>
+    <h5><%= link_to 'Back', users_path %> |
+    <%= link_to 'New Deck', new_user_deck_path(current_user.id), remote: true %></h5>
     <br>
     <br>
     <br>
+    <div class="searchdiv">
+
     <i class="material-icons">search</i>
     <%= form_tag(user_decks_path, method: :get) do %>
       <%= search_field_tag :term %>
       <%= submit_tag 'Search!', {class: "waves-effect waves-light yellow black-text btn"} %>
     <% end %>
+    </div>
     <br>
 
     <% if @results.nil? # no search %>
@@ -108,9 +111,10 @@
 
 <!-- Mobile view -->
     <div class="col s12 hide-on-med-and-up">
-      <div class="card-panel yellow lighten-2">
+      <div class="card-panel">
         <div class="row">
           <h5 style="text-align:center; font-weight:bold;">MY STUDYDECKS</h5>
+          <div class="divider"></div>
 
           <% @mydecks.each do |deck| %>
           <div class="col s12 m6 l6 center">
