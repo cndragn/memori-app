@@ -13,6 +13,6 @@ $(document).on('ready', function(){
   $('#deck_name').focus();
 
   $('.modal-footer .btn-primary').click(function(){
-    $('.modal-body form').submit();
+    $('.modal-content form').submit();
   });
 });
