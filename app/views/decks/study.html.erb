@@ -7,7 +7,7 @@
 <%= form_for(@deck, url: { action:'review' }) do |form| %>
 <%= form.text_field :user_answer %>
 <%= form.hidden_field :correct_answer, :value => @answer  %>
-<%= form.submit %>
+<%= form.submit "Submit Answer" %>
 <% end %>
 
 <p>Dev Notes - Correct Answer: <%= @answer %></p>
