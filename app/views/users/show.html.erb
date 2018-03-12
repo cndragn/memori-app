@@ -9,14 +9,21 @@
       <div class="card-panel black-text center">
         <i class="large material-icons">person</i>
         <p>
-          Name: <%= @user.name %>
+          <p style="font-weight:bold;">Name:</p> <%= @user.name %>
         </p>
         <p>
-          Email: <%= @user.email %>
+          <p style="font-weight:bold;">Email:</p> <%= @user.email %>
         </p>
         <br>
-        <br>
         <%= link_to( ("<i class='material-icons'>edit</i>").html_safe, edit_user_path(current_user.id), { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
+        <br>
+        <br>
+        <div class="divider">
+
+        </div>
+        <br>
+          <p style="font-weight:bold;"><%= link_to 'My studydecks', user_decks_path(current_user.id) %></p>
+        <br>
       </div>
     </div>
 
@@ -24,11 +31,6 @@
         <div class="card-panel black-text">
           <h3>My scores</h3>
         </div>
-      </div>
-      <div class="col s12 m12 l12">
-        <div class="card-panel black-text">
-                  <h3><%= link_to 'My studydecks', user_decks_path(current_user.id) %></h3>
-                </div>
       </div>
     </div>
 
