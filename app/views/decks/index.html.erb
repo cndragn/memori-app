@@ -7,14 +7,20 @@
     <h5><%= link_to 'Back', users_path %> |
     <%= link_to 'New Deck', new_user_deck_path(current_user.id), remote: true %></h5>
     <br>
-    <br>
-    <br>
-    <div class="searchdiv">
+  
+    <div class="center">
+      <p style="font-weight:bold;">Search for title or description  <i class="material-icons">search</i></p>
+    </div>
 
-    <i class="material-icons">search</i>
+    <div class="searchdiv center">
     <%= form_tag(user_decks_path, method: :get) do %>
       <%= search_field_tag :term %>
+    </div>
+
+    <br>
+    <div class="center">
       <%= submit_tag 'Search!', {class: "waves-effect waves-light yellow black-text btn"} %>
+    </div>
     <% end %>
     </div>
     <br>
