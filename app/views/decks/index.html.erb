@@ -7,7 +7,7 @@
     <h5><%= link_to 'Back', users_path %> |
     <%= link_to 'New Deck', new_user_deck_path(current_user.id), remote: true %></h5>
     <br>
-  
+
     <div class="center">
       <p style="font-weight:bold;">Search for title or description  <i class="material-icons">search</i></p>
     </div>
@@ -19,10 +19,10 @@
 
     <br>
     <div class="center">
-      <%= submit_tag 'Search!', {class: "waves-effect waves-light yellow black-text btn"} %>
+      <%= submit_tag 'Search', {class: "waves-effect waves-light yellow black-text btn", style: "width:120px;"} %>
+      <%= link_to 'Clear ', user_decks_path, {class: "waves-effect waves-light yellow btn clear", style: "width:120px;;"} %>
     </div>
     <% end %>
-    </div>
     <br>
 
     <% if @results.nil? # no search %>
@@ -32,10 +32,13 @@
 
     <% else %>
     <div class="col s12">
-      <div class="card-panel yellow lighten-2">
+      <div class="card-panel-1">
         <div class="row">
-          <h3>Searchresult</h3>
-
+          <h5 style="text-align:center; font-weight:bold;">SEARCHRESULTS</h4>
+          <div class="divider">
+          </div>
+          <br>
+          <br>
           <% @results.each do |deck| %>
           <div class="col s12 m6 l6 center">
             <div class="card-panel">
@@ -70,19 +73,22 @@
         </div>
       </div>
     <% end %>
+  </div>
+
 
     <!-- Desktop view -->
-
-  <div class="col s12 hide-on-small-only">
+<div class="container">
+    <div class="col s12 hide-on-small-only">
     <div class="card-panel-1">
       <div class="row">
-        <h4 style="text-align:center; font-weight:bold;">MY STUDYDECKS</h4>
+        <h5 style="text-align:center; font-weight:bold;">MY STUDYDECKS</h4>
         <div class="divider">
-
         </div>
+        <br>
+        <br>
         <% @mydecks.each do |deck| %>
         <div class="col s12 m6 l6 center">
-          <div class="card-panel-2">
+          <div class="card-panel">
             <table>
               <tbody>
                 <tr>
@@ -114,14 +120,17 @@
       </div>
       </div>
     </div>
+  </div>
 
 <!-- Mobile view -->
+<div class="container">
     <div class="col s12 hide-on-med-and-up">
-      <div class="card-panel">
+      <div class="card-panel-1">
         <div class="row">
           <h5 style="text-align:center; font-weight:bold;">MY STUDYDECKS</h5>
           <div class="divider"></div>
-
+          <br>
+          <br>
           <% @mydecks.each do |deck| %>
           <div class="col s12 m6 l6 center">
             <div class="card-panel">
