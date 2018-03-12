@@ -9,7 +9,7 @@ class UserMailer < ApplicationMailer
   def follow_up(email)
     mail(
       to: email,
-      subject: "How are things going?"
+      subject: "Welcome to Memori!"
     )
   end
 

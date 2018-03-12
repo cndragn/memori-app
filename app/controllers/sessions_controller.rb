@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       #google authenticate code
     elsif user = User.from_omniauth(request.env["omniauth.auth"])
     session[:user_id] = user.id
-    redirect_to root_path
+    redirect_to users_path
     else
       # If user's login doesn't work, send them back to the login form.
       redirect_to login_path

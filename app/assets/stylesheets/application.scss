@@ -16,8 +16,6 @@
 
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
-
-
 .imageresp {
   position: relative;
   height: 200px;
@@ -37,6 +35,42 @@
       transform: translate(-50%, -50%); /* This is a shorthand of
                                            translateX(-50%) and translateY(-50%) */
 }
+.imageresp-desktop {
+  position: relative;
+  height: 200px;
+}
+.imageresp-mobile {
+  position: relative;
+  height: 70px;
+}
+.image1 {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.image2 {
+  position: absolute;
+      top: 50%;  /* position the top  edge of the element at the middle of the parent */
+      left: 50%; /* position the left edge of the element at the middle of the parent */
+
+      transform: translate(-50%, -50%); /* This is a shorthand of
+                                           translateX(-50%) and translateY(-50%) */
+}
+.image1-mob {
+  position: relative;
+  width: 100%;
+  height: 70px;
+}
+
+.image2-mob {
+  position: absolute;
+      top: 50%;  /* position the top  edge of the element at the middle of the parent */
+      left: 50%; /* position the left edge of the element at the middle of the parent */
+      height: 50px;
+      transform: translate(-50%, -50%); /* This is a shorthand of
+                                           translateX(-50%) and translateY(-50%) */
+}
 
 select {
   display: block;
@@ -47,4 +81,12 @@ nav ul a {
 
     padding: 20px;
 
+}
+
+.card-panel {
+  border-radius: 8px;
+}
+
+.card-panel .index {
+  height: 500px;
 }
