@@ -15,9 +15,9 @@
 //= require_tree .
 //= require materialize
 
-$(document).on('ready', function() {
-  $('.slider').slider();
-});
+// $(document).on('ready', function() {
+//   $('.slider').slider();
+// });
 
 // <html>
 // <head>

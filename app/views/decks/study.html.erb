@@ -1,15 +1,63 @@
 <%= render 'layouts/imageheader' %>
+<!-- Desktop view -->
+<br>
+<div class="container hide-on-small-only">
+  <div class="row">
+    <div class="card-panel center">
 
-<h1>Study Deck</h1>
-
-<p><%= @question %></p>
+<h3>STUDY DECK</h3>
+<br>
+<br>
+<h4>Translate:</h4>
+<h5 style="font-weight:bold;">"<%= @question %>"</h5>
 
 <%= form_for(@deck, url: { action:'review' }) do |form| %>
+<div class="col s6 push-s3">
 <%= form.text_field :user_answer %>
 <%= form.hidden_field :correct_answer, :value => @answer  %>
-<%= form.submit %>
+</div>
+<div class="col s12 center">
+<%= form.submit 'Submit', class: "waves-effect waves-light yellow black-text btn" %>
+</div>
+<br>
 <% end %>
+<br>
+<br>
+<p>Dev Notes - Correct Answer: <%= @answer %></p>
+
+<p id="notice"><%= notice %></p>
+</div>
+</div>
+
+</div>
+
+<!-- Mobile view -->
+<div class="container hide-on-med-and-up">
+  <div class="row">
+    <div class="card-panel center">
+
+
+<h5>STUDY DECK</h5>
+<br>
+<h4>Translate:</h4>
+<h5 style="font-weight:bold;">"<%= @question %>"</h5>
+
+<%= form_for(@deck, url: { action:'review' }) do |form| %>
+<div class="col s6 push-s3">
+<%= form.text_field :user_answer %>
+<%= form.hidden_field :correct_answer, :value => @answer  %>
+</div>
+<div class="col s12 center">
+<%= form.submit 'Submit', class: "waves-effect waves-light yellow black-text btn" %>
+</div>
+<br>
+<% end %>
+<br>
 
 <p>Dev Notes - Correct Answer: <%= @answer %></p>
 
 <p id="notice"><%= notice %></p>
+</div>
+</div>
+
+</div>
