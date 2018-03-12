@@ -4,15 +4,13 @@
 
 
 $(document).on('ready', function(){
-  $('.flipButton1').bind("click", function(){
-    $(this).prev().toggleClass('hover');
-  })
-  $('.flipButton2').bind("click", function(){
-    $(this).prev().toggleClass('hover');
-  })
   $('#deck_name').focus();
 
   $('.modal-footer .btn-primary').click(function(){
     $('.modal-content form').submit();
   });
+
+  $('.actions').click(function(){
+    $('.modal-content form').submit();
+  })
 });
