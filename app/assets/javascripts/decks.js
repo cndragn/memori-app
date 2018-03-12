@@ -10,7 +10,7 @@ $(document).on('ready', function(){
     $('.modal-content form').submit();
   });
 
-  $('.actions').click(function(){
-    $('.modal-content form').submit();
-  })
+  $('.actions').click(function() {
+    $('.modal-body form').submit();
+  });
 });

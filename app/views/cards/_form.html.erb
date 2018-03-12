@@ -38,10 +38,10 @@
         <%= form.hidden_field :review, id: :card_review, :value => 0 %>
       </div>
 
-      <div class="actions">
+      <div class="actions modal-action modal-close">
         <%= form.submit %>
       </div>
-      <%= link_to 'Back', @deck %>
+      <%= link_to 'Back', deck_cards_path %>
 
     </div>
   </div>

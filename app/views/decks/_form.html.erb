@@ -38,7 +38,7 @@
           <%= form.collection_select :category_id, Category.order(:label),:id,:label, :include_blank => true %>
         </div>
 
-        <div class="actions">
+        <div class="actions modal-action modal-close">
           <%= form.submit %>
         </div>
 

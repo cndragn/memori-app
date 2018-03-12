@@ -5,7 +5,7 @@ $(document).on('ready', function() {
 
   $('#card_name').focus();
 
-  $('.modal-footer .btn-primary').click(function() {
+  $('.actions').click(function() {
     $('.modal-body form').submit();
   });
 });
