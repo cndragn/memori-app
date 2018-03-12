@@ -18,22 +18,30 @@
         <%= password_field_tag :password %>
       </div>
 
-      <%= submit_tag "Login" %>
+      <button class="btn waves-effect waves-light grey lighten-2 black-text" type="submit" name="action">Login</button>
 
       <% end %>
       <br>
+      <div class="divider">
+      </div>
+      <br>
+      <div class="center" style="color:black;">
+        OR
+      </div>
+      <br>
 
-      <fb:login-button scope="public_profile,email,user_friends"
-        onlogin="checkLoginState();">
-      </fb:login-button>
+      <a scope="public_profile,email,user_friends"
+        onlogin="checkLoginState();" class="waves-effect waves-light btn blue darken-4 social facebook white-text">
+        <i class="fab fa-facebook-f"></i>   Sign in with facebook</a>
+
       <!-- <div class="fb-login-button" data-width="30" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div> -->
       <% link_to 'Token Transfer', facebook_path,
         id: 'token-transfer-link' %><br>
       <% link_to 'Real Login', facebook_path,
         id: 'login-link' %>
         <br>
-      <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
-        <br>
+        <a id="sign_in" href="/auth/google_oauth2" class="waves-effect waves-light btn deep-orange social google white-text">
+          <i class="fab fa-google"></i> Sign in with google</a>  <br>
 
           </div>
 
