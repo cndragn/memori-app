@@ -27,6 +27,7 @@
 </table>
 
 <br>
+<%= link_to 'Back', @deck %> |
 
 <%= link_to 'New Card', new_deck_card_path(@deck), remote: true %>
 <!-- Modal Structure -->
@@ -36,7 +37,7 @@
     <p>A bunch of text</p>
   </div>
   <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
   </div>
 </div>
 <p><%= @translation %></p>
