@@ -103,12 +103,9 @@ nav ul a {
     z-index: 999;
     will-change: width, height;
     margin-top: 64px;
+    border-radius: 8px;
 }
 
 a.social:visited {
   color: white!important;
-}
-
-a.social {
-  width: 280px;
 }
