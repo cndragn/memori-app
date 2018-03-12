@@ -4,16 +4,16 @@
 /* entire container, keeps perspective */
 .flipButton1 {
   text-align:center;
-  width: 500px;
+  width: 100%;
 
 }
 .flip-container-1 {
-  -webkit-perspective: 500;
-  -moz-perspective: 500;
-  -o-perspective: 500;
-  perspective: 500;
-
-	border: 1px solid #ccc;
+  -webkit-perspective: 600;
+  -moz-perspective: 600;
+  -o-perspective: 600;
+  perspective: 600;
+  text-align: center;
+  border-radius: 8px;
 }
 
 /*	.flip-container:hover .flipper,  */
@@ -26,21 +26,20 @@
 	}
 
 .flip-container-1, .front1, .back1 {
-	width: 500px;
-	height: 350px;
+	width: 100%;
+	height: 500px;
 }
 .flipButton2 {
   text-align:center;
-  width: 250px;
+  width: 100%;
 
 }
 .flip-container-2 {
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  -o-perspective: 1000;
-  perspective: 1000;
-
-	border: 1px solid #ccc;
+  -webkit-perspective: 250;
+  -moz-perspective: 250;
+  -o-perspective: 250;
+  perspective: 250;
+  border-radius: 8px;
 }
 
 /*	.flip-container:hover .flipper,  */
@@ -53,9 +52,8 @@
 	}
 
 .flip-container-2, .front2, .back2 {
-	width: 250px;
-	height: 250px;
-}
+	width: 100%;
+	height: 280px;}
 
 .flipper {
 	-webkit-transition: 0.5s;
@@ -85,9 +83,9 @@
 }
 
 .front1, .front2 {
-	background-color: black;
 	z-index: 2;
-	color: white;
+	color: black;
+  text-align: center;
 }
 
 .back1, .back2 {
@@ -95,7 +93,8 @@
 	-moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
 	transform: rotateY(180deg);
-	background-color: grey;
+  color: black;
+  text-align: center;
 }
 
 // .front .name {
@@ -179,13 +178,6 @@
 	text-decoration: none;
 }
 
-.blue
-{
-	background-color: #3498DB;
-	border-bottom: 5px solid #2980B9;
-	text-shadow: 0px -2px #2980B9;
-}
-
 .yellow
 {
 	background-color: #F2CF66;
@@ -199,4 +191,32 @@
 	transform: translate(0px,5px);
   -webkit-transform: translate(0px,5px);
 	border-bottom: 1px solid;
+}
+
+.card-panel-2 {
+    transition: box-shadow .25s;
+    padding: 24px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+a:visited {
+    color: grey!important;
+}
+
+a {
+  color:black!important;
+}
+
+a.brand-logo:hover {
+    background-color: white!important;
+}
+
+.searchdiv {
+  background-color: lightgrey;
+}
+
+.center {
+  border-radius: 5px;
 }

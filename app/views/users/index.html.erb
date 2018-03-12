@@ -1,15 +1,12 @@
+<%= render 'layouts/imageheader' %>
 
-<div class="imageresp">
-  <%= image_tag "header1.jpg", :class => "image1" %>
-  <%= image_tag "LogoM.png", :class => "image2" %>
-</div>
 
 <br>
 <br>
     <div class="row">
 
       <div class="col s12 m6 l6 center">
-        <div class="card-panel yellow lighten-2">
+        <div class="card-panel yellow">
             <%= link_to( ("<i class='material-icons'>add</i>").html_safe, new_user_deck_path(current_user.id), { :class=>"btn-floating btn-large waves-effect waves-light black", :remote => true }) %>
             <!-- Modal Structure -->
             <div id="modal1" class="modal">
@@ -21,20 +18,26 @@
                 <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
               </div>
             </div>
-          <h3>CREATE</h3>
+          <h3 style="font-weight:bold;">CREATE</h3>
         <p>Create your own studydeck with the words you want to learn</p>
         </div>
       </div>
 
       <div class="col s12 m6 l6 center">
-        <div class="card-panel yellow lighten-2">
+        <div class="card-panel yellow">
             <%= link_to( ("<i class='material-icons'>search</i>").html_safe, user_decks_path(current_user.id), { :class=>"btn-floating btn-large waves-effect waves-light black" }) %>
-          <h3>MY DECKS</h3>
+          <h3 style="font-weight:bold;">MY DECKS</h3>
         <p>Use our library of studydecks to find one you want to use</p>
         </div>
       </div>
     </div>
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>

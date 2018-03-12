@@ -1,10 +1,5 @@
 
-<div class="imageresp">
-  <%= image_tag "header1.jpg", :class => "image1" %>
-  <%= image_tag "LogoM.png", :class => "image2" %>
-</div>
-
-
+<%= render 'layouts/imageheader' %>
 
 <br>
 <div class="container">
@@ -30,33 +25,12 @@
           <h3>My scores</h3>
         </div>
       </div>
+      <div class="col s12 m12 l12">
+        <div class="card-panel black-text">
+                  <h3><%= link_to 'My studydecks', user_decks_path(current_user.id) %></h3>
+                </div>
+      </div>
     </div>
 
-
-    <div class="col s12">
-      <div class="card-panel yellow lighten-3">
-        <div class="row">
-          <h3>My studydecks</h3>
-
-          <% @mydecks.each do |deck| %>
-          <div class="col s12 m6 l6 center">
-            <div class="card-panel">
-              <table>
-                <tbody>
-                  <tr>
-                    <h3><%= link_to deck.title, deck %></h3>
-                    <p><%= deck.description %></p>
-                    <p><%= deck.language.lingua %> | <%= deck.category.label %></p>
-                    <p><%= link_to 'Card List', deck_cards_path(deck) %> | <%= link_to 'Edit', edit_deck_path(deck) %> | <%= link_to 'Destroy', deck, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <% end %>
-
-        </div>
-        </div>
-      </div>
 
     </div>

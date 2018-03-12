@@ -6,6 +6,8 @@ class CardsController < ApplicationController
   # GET /cards.json
   def index
     @cards = Card.all
+    @mycards = Card.where(deck_id: @deck)
+
   end
 
   # GET /cards/1

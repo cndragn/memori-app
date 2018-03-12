@@ -1,7 +1,5 @@
-<div class="imageresp">
-  <%= image_tag "header1.jpg", :class => "image1" %>
-  <%= image_tag "LogoM.png", :class => "image2" %>
-</div>
+<%= render 'layouts/imageheader' %>
+
 
 <div class="container">
   <div class="row">
@@ -33,9 +31,13 @@
         id: 'token-transfer-link' %><br>
       <% link_to 'Real Login', facebook_path,
         id: 'login-link' %>
+        <br>
+      <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+        <br>
+
+          </div>
 
       <br>
       <br>
     </div>
   </div>
-</div>
