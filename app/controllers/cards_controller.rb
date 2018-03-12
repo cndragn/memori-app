@@ -33,12 +33,13 @@ class CardsController < ApplicationController
     @card.update(target: translation)
 
     respond_to do |format|
+
       if @card.save
         # format.html { redirect_to @card, notice: 'Card was successfully created.' }
         format.html { redirect_to deck_cards_path(@deck), notice: 'Card was succesfully created.'}
         format.json { render :show, status: :created, location: @card }
       else
-        format.html { render :new }
+        format.html { redirect_to deck_cards_path(@deck), notice: 'Card already exists.' }
         format.json { render json: @card.errors, status: :unprocessable_entity }
       end
     end
