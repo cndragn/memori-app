@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20180306023055) do
+ActiveRecord::Schema.define(version: 20180311094732) do
 
   create_table "cards", force: :cascade do |t|
     t.string "original"
@@ -25,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180306023055) do
     t.integer "correct"
     t.integer "wrong"
     t.integer "review"
+    t.string "user_answer"
   end
 
   create_table "categories", force: :cascade do |t|
