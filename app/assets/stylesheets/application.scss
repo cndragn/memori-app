@@ -36,6 +36,20 @@ img {
   max-width: 100%;
 }
 
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.dev {
+  visibility: hidden;
+}
+
+#notice {
+    color: green;
+    text-align: center;
+    font-size: 2rem;
+}
+
 // yellow bottom border
 .bborder {
   border-bottom: 2px solid #ecec00;
@@ -88,6 +102,19 @@ input[type=text]:not(.browser-default), input[type=password]:not(.browser-defaul
 .page-footer {
   font-size: 1rem;
 }
+
+//LOGIN
+.login-drop input[type=text]:not(.browser-default) {
+    font-size: 1.6rem;
+}
+
+// STUDY
+input[type=text]:not(.browser-default) {
+    font-size: 2rem;
+    height: 2.2rem;
+}
+
+// --- ---
 
 
 .imageresp {
