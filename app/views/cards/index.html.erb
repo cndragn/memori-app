@@ -27,19 +27,18 @@
     </tbody>
   </table>
 
-<br>
-<%= link_to 'Back', user_decks_path(@deck) %> |
+  <br>
 
-<%= link_to 'New Card', new_deck_card_path(@deck), remote: true %>
-<!-- Modal Structure -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer">
-    <!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a> -->
-  </div>
-  <p><%= @translation %></p>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a> -->
+    </div>
+    <p><%= @translation %></p>
 
+  </div>
 </div>
