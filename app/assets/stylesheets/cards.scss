@@ -6,9 +6,12 @@
   margin-top: 40px;
 }
 .panel-card.new h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .panel-card.new .actions {
   margin-bottom: 40px;
-}
+
+  .notice {
+    display: none;
+  }
