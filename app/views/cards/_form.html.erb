@@ -13,10 +13,10 @@
 
 <div class="container">
   <div class="row">
-    <div class="panel-card">
-      <div class="col s12 m6 l6">
+    <div class="panel-card new">
+      <div class="col">
 
-        <h1>New Cards</h1>
+        <h1>Add Vocabulary Word</h1>
 
         <div class="field">
           <%= form.label :original %>
@@ -39,7 +39,7 @@
       </div>
 
       <div class="actions">
-        <%= form.submit %>
+        <%= form.submit  class: 'waves-effect waves-light btn yellow accent-2 black-text' %>
       </div>
       <%= link_to 'Back', @deck %>
 

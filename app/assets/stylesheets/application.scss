@@ -21,6 +21,7 @@
 //site-wide styles
 body, p, ol, ul, td {
   font-family: 'Josefin Sans', Verdana, sans-serif;
+  font-size: 1.3rem;
   color: #101010;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -49,7 +50,7 @@ img {
 
 // navigation
 nav ul, nav ul li {
-    height: 100%;
+  height: 100%;
 }
 nav ul a {
   font-size: 1.2rem;
@@ -58,10 +59,10 @@ nav ul a:hover {
   background-color: transparent;
 }
 nav ul li:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 a:hover {
-    background-color: transparent;
+  background-color: transparent;
 }
 li.sign-in-name {
   margin-top: 20px;
@@ -74,33 +75,18 @@ li.sign-in-name:hover {
 }
 
 label {
-    font-size: 1rem;
-    color: #000;
-    margin-top: 20px;
+  font-size: 1rem;
+  color: #000;
+  margin-top: 20px;
 }
 input[type=text]:not(.browser-default), input[type=password]:not(.browser-default) {
   height: 2rem;
   margin: 0 0 10px 0;
 }
-// slider
-.slides .btn {
-  line-height: 8px;
-  padding: 27px 50px;
-  font-size: 1.4rem;
-}
-h5.light {
-  font-size: 2.7rem;
-}
 
-
-
-//front page info cards
-.info ul {
-  font-size: 1.3rem;
-  line-height: 3.2rem;
-  padding: 27px;
-  text-align: left;
-  margin-left: 15px;
+//footer
+.page-footer {
+  font-size: 1rem;
 }
 
 

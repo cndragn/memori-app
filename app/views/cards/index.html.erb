@@ -1,43 +1,46 @@
 <%= render 'layouts/imageheader' %>
 
+<div class="container cards">
 
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<h1>Cards</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Original</th>
-      <th>Target</th>
-      <th>Language</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1>Cards</h1>
+  <%= link_to 'Back', @deck %> |  <%= link_to 'New Card', new_deck_card_path(@deck), remote: true %>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th>Original</th>
+        <th>Target</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @mycards.each do |card| %>
+    <tbody>
+      <% @mycards.each do |card| %>
       <tr>
         <td><%= card.original %></td>
         <td><%= card.target %></td>
-        <td><%= card.language %></td>
         <td><%= link_to 'Delete', [@deck, card], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
 
-<br>
-<%= link_to 'Back', @deck %> |
+  <br>
+  <%= link_to 'Back', @deck %> |
 
-<%= link_to 'New Card', new_deck_card_path(@deck), remote: true %>
-<!-- Modal Structure -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
+  <%= link_to 'New Card', new_deck_card_path(@deck), remote: true %>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
+    </div>
   </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
-  </div>
+  <p><%= @translation %></p>
+
 </div>
-<p><%= @translation %></p>
