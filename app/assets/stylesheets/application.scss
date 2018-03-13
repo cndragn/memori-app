@@ -37,7 +37,7 @@ img {
 
 // yellow bottom border
 .bborder {
-    border-bottom: 2px solid #ecec00;
+  border-bottom: 2px solid #ecec00;
 }
 
 //buttons
@@ -48,27 +48,49 @@ img {
 }
 
 // navigation
+nav ul, nav ul li {
+    height: 100%;
+}
 nav ul a {
   font-size: 1.2rem;
 }
+nav ul a:hover {
+  background-color: transparent;
+}
+nav ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+a:hover {
+    background-color: transparent;
+}
+li.sign-in-name {
+  margin-top: 20px;
+  padding-right: 20px;
+  font-size: 1rem;
+}
 
+li.sign-in-name:hover {
+  background-color: transparent;
+}
 // slider
 .slides .btn {
   line-height: 8px;
-    padding: 27px 50px;
-    font-size: 1.4rem;
+  padding: 27px 50px;
+  font-size: 1.4rem;
 }
 h5.light {
   font-size: 2.7rem;
 }
 
+
+
 //front page info cards
 .info ul {
-    font-size: 1.3rem;
-    line-height: 3.2rem;
-    padding: 27px;
-    text-align: left;
-    margin-left: 15px;
+  font-size: 1.3rem;
+  line-height: 3.2rem;
+  padding: 27px;
+  text-align: left;
+  margin-left: 15px;
 }
 
 

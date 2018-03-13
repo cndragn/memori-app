@@ -9,7 +9,7 @@
     <a href="#" data-activates="mobile-demo" class="right button-collapse"><i class="material-icons black-text">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <% if current_user %>
-        <li>Signed in as <%= current_user.name %> </li>
+        <li class="sign-in-name">Hello <%= current_user.name %>!</li>
         <li><%= link_to "My profile", current_user %></li>
         <li><%= link_to "Logout", logout_path %></li>
       <% else %>
