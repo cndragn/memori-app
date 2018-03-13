@@ -2,33 +2,28 @@
 <!-- Desktop view -->
 <br>
 <div class="container hide-on-small-only">
-  <div class="row">
+  <div class="row study">
     <div class="card-panel center">
 
-<h3>STUDY DECK</h3>
-<br>
-<br>
-<h4>Translate:</h4>
-<h5 style="font-weight:bold;">"<%= @question %>"</h5>
+<h3><%= @question %></h3>
 
 <%= form_for(@deck, url: { action:'review' }) do |form| %>
 <div class="col s6 push-s3">
 <%= form.text_field :user_answer %>
 <%= form.hidden_field :correct_answer, :value => @answer  %>
 </div>
-<div class="col s12 center">
-<%= form.submit 'Submit', class: "waves-effect waves-light yellow black-text btn" %>
+<div class="col s12 center  mb-40">
+<%= form.submit 'Submit Your Translation', class: "waves-effect waves-light yellow black-text btn" %>
 </div>
-<br>
 <% end %>
-<br>
-<br>
-<p>Dev Notes - Correct Answer: <%= @answer %></p>
+<p class="dev">Dev Notes - Correct Answer: <%= @answer %></p>
+<p><%= link_to 'Return to Deck List', user_decks_path(current_user.id) %></p>
+
 
 <p id="notice"><%= notice %></p>
 </div>
 </div>
-<%= link_to 'Back to studydecks', user_decks_path(current_user.id) %>
+
 <br>
 </div>
 
@@ -38,7 +33,7 @@
     <div class="card-panel center">
 
 
-<h5>STUDY DECK</h5>
+<h5>Study Deck</h5>
 <br>
 <h4>Translate:</h4>
 <h5 style="font-weight:bold;">"<%= @question %>"</h5>
@@ -57,7 +52,7 @@
 <% end %>
 <br>
 
-<p>Dev Notes - Correct Answer: <%= @answer %></p>
+<!-- <p>Dev Notes - Correct Answer: <%= @answer %></p> -->
 
 </div>
 </div>

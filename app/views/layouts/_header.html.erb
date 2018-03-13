@@ -9,8 +9,7 @@
     <a href="#" data-activates="mobile-demo" class="right button-collapse"><i class="material-icons black-text">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <% if current_user %>
-        <li>Signed in as <%= current_user.name %> </li>
-        <li><%= link_to "Dashboard", users_path %></li>
+        <li class="sign-in-name">Hello <%= current_user.name %>!</li>
         <li><%= link_to "My profile", current_user %></li>
         <li><%= link_to "Logout", logout_path %></li>
       <% else %>
@@ -47,7 +46,7 @@
 </nav>
 <!-- Dropdown Structure -->
 <div id="dropdown1" class="dropdown-content" data-constrainwidth="false">
-  <div class="container">
+  <div class="container login-drop">
     <div class="row">
       <div class="col s12">
         <h5 style="color:black;">Login</h1>
@@ -64,7 +63,7 @@
           <%= password_field_tag :password %>
         </div>
 
-        <button class="btn waves-effect waves-light grey lighten-2 black-text" type="submit" name="action">Login</button>
+        <button class="btn waves-effect waves-light yellow black-text" type="submit" name="action">Login</button>
         <% end %>
         <br>
         <br>
@@ -85,7 +84,7 @@
         <% link_to 'Real Login', facebook_path,
           id: 'login-link' %>
           <br>
-          <a id="sign_in" href="/auth/google_oauth2" class="waves-effect waves-light btn deep-orange social google white-text">
+          <a id="sign_in" href="/auth/google_oauth2" class="waves-effect waves-light btn red darken-2 social google white-text">
             <i class="fab fa-google"></i> Sign in with google</a>
           <br>
 

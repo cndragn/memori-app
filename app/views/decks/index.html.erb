@@ -34,14 +34,14 @@
     <div class="col s12">
       <div class="card-panel-1">
         <div class="row">
-          <h5 style="text-align:center; font-weight:bold;">SEARCHRESULTS</h4>
+          <h5 style="text-align:center; font-weight:bold;">SEARCH RESULTS</h4>
           <div class="divider">
           </div>
           <br>
           <br>
           <% @results.each do |deck| %>
           <div class="col s12 m6 l6 center">
-            <div class="card-panel">
+            <div class="card-panel st-decks">
               <table>
                 <tbody>
                   <tr>
@@ -81,14 +81,14 @@
     <div class="col s12 hide-on-small-only">
     <div class="card-panel-1">
       <div class="row">
-        <h5 style="text-align:center; font-weight:bold;">MY STUDYDECKS</h4>
+        <h5 style="text-align:center; font-weight:bold;">Study Decks</h4>
         <div class="divider">
         </div>
         <br>
         <br>
         <% @mydecks.each do |deck| %>
         <div class="col s12 m6 l6 center">
-          <div class="card-panel">
+          <div class="card-panel st-decks">
             <table>
               <tbody>
                 <tr>
@@ -127,7 +127,7 @@
     <div class="col s12 hide-on-med-and-up">
       <div class="card-panel-1">
         <div class="row">
-          <h5 style="text-align:center; font-weight:bold;">MY STUDYDECKS</h5>
+          <h5 style="text-align:center; font-weight:bold;">Study Decks</h5>
           <div class="divider"></div>
           <br>
           <br>
@@ -137,7 +137,7 @@
               <table>
                 <tbody>
                   <tr>
-                    <h5><%= link_to deck.title, deck_study_path(deck) %></h5>
+                    <h5><%= link_to deck.title, deck_study_path(deck), class: 'deck-title'%></h5>
                     <p><%= deck.description %></p>
                     <p><%= deck.language.lingua %> | <%= deck.category.label %></p>
                     <p><%= link_to 'Card List', deck_cards_path(deck) %> |

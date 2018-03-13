@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* entire container, keeps perspective */
+
+
+
+
 .flipButton1 {
   text-align:center;
   width: 100%;
@@ -201,9 +205,7 @@
     background-color: #fff;
 }
 
-a:visited {
-    color: grey!important;
-}
+
 
 a {
   color:black!important;
@@ -225,7 +227,7 @@ a.clear {
   color: black!important;
 }
 
-.card-panel a:hover {
+.card-panel.st-decks a:hover {
   background-color: white!important;
   color: grey!important;
 }
