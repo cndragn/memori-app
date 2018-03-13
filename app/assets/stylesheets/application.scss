@@ -16,6 +16,62 @@
 
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+
+//site-wide styles
+body, p, ol, ul, td {
+  font-family: 'Josefin Sans', Verdana, sans-serif;
+  color: #101010;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h3 {
+  font-size: 3rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+// yellow bottom border
+.bborder {
+    border-bottom: 2px solid #ecec00;
+}
+
+//buttons
+.drpshadow {
+  -webkit-box-shadow: 4px 4px 0 0  #000;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    4px 4px 0 0  #000;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         4px 4px 0 0  #000;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+// navigation
+nav ul a {
+  font-size: 1.2rem;
+}
+
+// slider
+.slides .btn {
+  line-height: 8px;
+    padding: 27px 50px;
+    font-size: 1.4rem;
+}
+h5.light {
+  font-size: 2.7rem;
+}
+
+//front page info cards
+.info ul {
+    font-size: 1.3rem;
+    line-height: 3.2rem;
+    padding: 27px;
+    text-align: left;
+    margin-left: 15px;
+}
+
+
 .imageresp {
   position: relative;
   height: 200px;
@@ -29,11 +85,11 @@
 
 .image2 {
   position: absolute;
-      top: 50%;  /* position the top  edge of the element at the middle of the parent */
-      left: 50%; /* position the left edge of the element at the middle of the parent */
+  top: 50%;  /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
 
-      transform: translate(-50%, -50%); /* This is a shorthand of
-                                           translateX(-50%) and translateY(-50%) */
+  transform: translate(-50%, -50%); /* This is a shorthand of
+  translateX(-50%) and translateY(-50%) */
 }
 .imageresp-desktop {
   position: relative;
@@ -51,11 +107,11 @@
 
 .image2 {
   position: absolute;
-      top: 50%;  /* position the top  edge of the element at the middle of the parent */
-      left: 50%; /* position the left edge of the element at the middle of the parent */
+  top: 50%;  /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
 
-      transform: translate(-50%, -50%); /* This is a shorthand of
-                                           translateX(-50%) and translateY(-50%) */
+  transform: translate(-50%, -50%); /* This is a shorthand of
+  translateX(-50%) and translateY(-50%) */
 }
 .image1-mob {
   position: relative;
@@ -65,11 +121,11 @@
 
 .image2-mob {
   position: absolute;
-      top: 50%;  /* position the top  edge of the element at the middle of the parent */
-      left: 50%; /* position the left edge of the element at the middle of the parent */
-      height: 50px;
-      transform: translate(-50%, -50%); /* This is a shorthand of
-                                           translateX(-50%) and translateY(-50%) */
+  top: 50%;  /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  height: 50px;
+  transform: translate(-50%, -50%); /* This is a shorthand of
+  translateX(-50%) and translateY(-50%) */
 }
 
 select {
@@ -79,7 +135,7 @@ select {
 
 nav ul a {
 
-    padding: 20px;
+  padding: 20px;
 
 }
 
@@ -92,18 +148,18 @@ nav ul a {
 }
 
 .dropdown-content {
-    background-color: #fff;
-    margin: 0;
-    display: none;
-    min-width: 300px;
-    max-height: 800px;
-    overflow-y: auto;
-    opacity: 0;
-    position: absolute;
-    z-index: 999;
-    will-change: width, height;
-    margin-top: 64px;
-    border-radius: 8px;
+  background-color: #fff;
+  margin: 0;
+  display: none;
+  min-width: 300px;
+  max-height: 800px;
+  overflow-y: auto;
+  opacity: 0;
+  position: absolute;
+  z-index: 999;
+  will-change: width, height;
+  margin-top: 64px;
+  border-radius: 8px;
 }
 
 a.social:visited {
@@ -111,19 +167,19 @@ a.social:visited {
 }
 
 .page-footer.small {
-padding-top: 7px;
-padding-bottom: 7px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .row.small {
   margin-bottom:7px;
 }
 .footer-copyright.small{
-    overflow: hidden;
-    min-height: 30px;
-    display: flex;
-    align-items: center;
-    padding: 0px 0px;
-    color: rgba(255, 255, 255, 0.8);
-    background-color: rgba(51, 51, 51, 0.08);
+  overflow: hidden;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0px 0px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(51, 51, 51, 0.08);
 }
