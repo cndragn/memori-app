@@ -137,7 +137,7 @@
               <table>
                 <tbody>
                   <tr>
-                    <h5><%= link_to deck.title, deck %></h5>
+                    <h5><%= link_to deck.title, deck_study_path(deck) %></h5>
                     <p><%= deck.description %></p>
                     <p><%= deck.language.lingua %> | <%= deck.category.label %></p>
                     <p><%= link_to 'Card List', deck_cards_path(deck) %> |
@@ -162,6 +162,6 @@
     <p>A bunch of text</p>
   </div>
   <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
+    <!-- <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a> -->
   </div>
 </div>
