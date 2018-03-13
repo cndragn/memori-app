@@ -72,6 +72,16 @@ li.sign-in-name {
 li.sign-in-name:hover {
   background-color: transparent;
 }
+
+label {
+    font-size: 1rem;
+    color: #000;
+    margin-top: 20px;
+}
+input[type=text]:not(.browser-default), input[type=password]:not(.browser-default) {
+  height: 2rem;
+  margin: 0 0 10px 0;
+}
 // slider
 .slides .btn {
   line-height: 8px;
