@@ -2,7 +2,7 @@
   <div class="nav-wrapper white">
 
     <!-- <a href="#!" class="brand-logo left black-text"> -->
-    <a href="#" class="brand-logo left hide-on-small-only">
+    <a href="/users" class="brand-logo left hide-on-small-only">
     <img class="responsive-img" src="/assets/logo4.png" alt="Logo4">
   </a>
       <!-- <%= image_tag "logo4.png" %> -->
@@ -53,12 +53,12 @@
 
         <%= form_tag '/login' do %>
 
-        <div class="field">
+        <div class="field" style="color:black;">
           <%= label_tag :email %>
           <%= text_field_tag :email %>
         </div>
 
-        <div class="field">
+        <div class="field" style="color:black;">
           <%= label_tag :password %>
           <%= password_field_tag :password %>
         </div>

@@ -38,7 +38,7 @@
           <%= form.collection_select :category_id, Category.order(:label),:id,:label, :include_blank => true %>
         </div>
 
-        <div class="actions mb-40">
+        <div class="actions modal-action modal-close mb-40">
           <%= form.submit  class: 'waves-effect waves-light btn yellow accent-2 black-text' %>
         </div>
 
