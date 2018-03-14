@@ -4,9 +4,12 @@
   </div>
   <div class="container">
 
+
     <p style="font-weight:bold;"><%= link_to 'Back', users_path %> |
     <%= link_to 'New Deck', new_user_deck_path(current_user.id), remote: true %></p>
     <br>
+
+    <p id="notice"><%= notice %></p>
 
     <div class="center">
       <p style="font-weight:bold;">Search for title or description  <i class="material-icons">search</i></p>
@@ -45,7 +48,7 @@
               <table>
                 <tbody>
                   <tr>
-                    <h3><%= link_to deck.title, deck %></h3>
+                    <h3><%= link_to deck.title, deck_study_path(deck) %></h3>
                     <p><%= deck.description %></p>
                     <p><%= deck.language.lingua %> | <%= deck.category.label %></p>
                     <p><%= link_to 'Card List', deck_cards_path(deck) %> |
