@@ -1,24 +1,29 @@
-# README
+# Memori
+Memori is a spaced repetition digital flashcard app to improve Spanish vocabulary.  Unlike other spaced repetition apps, you have to type in your answer, so not only do you need to get the word correct you also need to know how to spell it.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The algorithm used to determine how often a vocabulary word appears for study is based on a description of the Leitner method for spaced repetition.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+## Project Details
 
-* Configuration
+![Memori Screenshot](https://github.com/cndragn/memori-app/blob/master/screenshot.png)
 
-* Database creation
+## Features
+* Login with email / password, or use Google / Facebook for one-click access.
+* Create decks to organize sets of vocabulary words.
+* Quick setup: Create card with English word and Memori will automatically translate into Spanish for study.
+* Based on the spaced repetition algorithm we wrote, if you get a word wrong, it will appear more often.
 
-* Database initialization
+## Technologies Used
 
-* How to run the test suite
+* Ruby
+* Ruby on Rails
+* OmniAuth
+* Google and Facebook integrated login
+* Microsoft Translation API
+* HTML / CSS / JavaScript
+* Materialize
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Acknowledgements
+Stock photos: Pexels.com
