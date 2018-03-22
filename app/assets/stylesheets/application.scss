@@ -49,6 +49,9 @@ img {
     text-align: center;
     font-size: 2rem;
 }
+#notice {
+  // display: none;
+}
 
 // yellow bottom border
 .bborder {
@@ -103,8 +106,12 @@ input[type=text]:not(.browser-default), input[type=password]:not(.browser-defaul
   font-size: 1rem;
 }
 
+.footer-copyright.small {
+  font-size: 0.7rem;
+}
+
 //LOGIN
-.login-drop input[type=text]:not(.browser-default) {
+.login-drop input[type=text]:not(.browser-default), input[type=search]:not(.browser-default) {
     font-size: 1.6rem;
 }
 

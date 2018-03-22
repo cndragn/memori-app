@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(name: "name", email: 'email', password: 'pass')
+User.create(name: "Candice Davidson", email: 'email', password: 'pass')
 User.create(name: "name2", email: 'email2', password: 'pass')
-User.create(name: "name2", email: 'email3', password: 'pass')
+
 
 Language.create(lingua: "Spanish", code: "es")
 
@@ -34,6 +34,7 @@ Deck.create(title: "Food", description: "Spanish dishes", category_id: 2, user_i
 Deck.create(title: "Weather", description: "The stuff small talk is made of", category_id: 5, user_id: 3, language_id: 1)
 Deck.create(title: "Numbers", description: "One ha ha ha! \n Two ha ha ha!", category_id: 6, user_id: 3, language_id: 1)
 Deck.create(title: "Travel", description: "Trains, Planes and Automobiles", category_id: 7, user_id: 3, language_id: 1)
+
 
 
 Card.create(original: "hello",target: "hola", language: "", deck_id: 1, language_id: 1, level: 0, correct: 0, wrong: 0, review: 0)
