@@ -3,9 +3,12 @@
 
     <!-- <a href="#!" class="brand-logo left black-text"> -->
     <a href="/users" class="brand-logo left hide-on-small-only">
-    <img class="responsive-img" src="/assets/logo4.png" alt="Logo4">
+    <!-- <%= link_to( image_tag("logo4.png"), image_path( "logo4.png"), alt: 'Memori' ) %> -->
+    <%= link_to image_path('logo4.png'), title: "Memori" do %>
+  <%= image_tag 'logo4.png', alt: 'Memori' %>
+<% end %>
   </a>
-      <!-- <%= image_tag "logo4.png" %> -->
+
     <a href="#" data-activates="mobile-demo" class="right button-collapse"><i class="material-icons black-text">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <% if current_user %>
