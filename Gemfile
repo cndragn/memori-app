@@ -41,10 +41,10 @@ gem 'bcrypt'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-require 'net/https'
-require 'uri'
-require 'cgi'
-require 'nokogiri'
+# gem 'net/https'
+# gem 'uri'
+# gem 'cgi'
+gem 'nokogiri'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
