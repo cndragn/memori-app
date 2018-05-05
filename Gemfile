@@ -25,7 +25,6 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 gem "omniauth-google-oauth2"
 
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'omniauth-oauth2', '~> 1.3.1'
 
 gem 'omniauth'
@@ -57,6 +56,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem "rspec-rails"
+  gem 'dotenv-rails'
 end
 
 group :development do
