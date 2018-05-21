@@ -89,8 +89,8 @@ end
 
   def review
     @deck = params[:deck_id].to_s
-    @user_answer = params[@deck][:user_answer]
-    @correct_answer = params[@deck][:correct_answer]
+    @user_answer = params[@deck][:user_answer].downcase
+    @correct_answer = params[@deck][:correct_answer].downcase
   end
 
   def check_answer
