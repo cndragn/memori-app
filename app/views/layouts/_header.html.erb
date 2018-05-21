@@ -52,16 +52,20 @@
       <div class="col s12">
         <h5 style="color:black;">Login</h1>
 
+        <p>To Demo Memori:<p>
+        <p>Email: demo<br>
+        Password: demo</p>
+
         <%= form_tag '/login' do %>
 
         <div class="field" style="color:black;">
           <%= label_tag :email %>
-          <%= text_field_tag :email %>
+          <%= text_field_tag :email, "demo" %>
         </div>
 
         <div class="field" style="color:black;">
           <%= label_tag :password %>
-          <%= password_field_tag :password %>
+          <%= password_field_tag :password, "demo" %>
         </div>
 
         <button class="btn waves-effect waves-light yellow black-text" type="submit" name="action">Login</button>
@@ -70,8 +74,6 @@
         <br>
         <div class="divider">
         </div>
-
-        <%= link_to 'Not Registered? Sign up!', register_path %>
       </div>
     </div>
   </div>
