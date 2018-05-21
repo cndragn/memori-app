@@ -14,7 +14,7 @@
 <div class="container">
 <div class="row">
 <div class="col s12 m6 l6">
-  <h3>Register here</h3>
+  <h3>Register</h3>
 
   <div class="field">
     <%= form.label :name %>
@@ -39,20 +39,7 @@
   <div class="actions">
     <%= form.submit 'Register' %>
   </div>
-<br>
-  <fb:login-button scope="public_profile,email,user_friends"
-    onlogin="checkLoginState();">
-  </fb:login-button>
-  <!-- <div class="fb-login-button" data-width="30" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div> -->
-  <% link_to 'Token Transfer', facebook_path,
-    id: 'token-transfer-link' %><br>
-  <% link_to 'Real Login', facebook_path,
-    id: 'login-link' %>
-    <br>
 
-    <%= link_to "Sign up with Google", "/auth/google_oauth2", id: "sign_in" %>
-    <br>
-    <br>
   <%= link_to 'Back', root_path %>
 
 </div>

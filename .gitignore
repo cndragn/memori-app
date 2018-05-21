@@ -21,8 +21,5 @@
 /yarn-error.log
 
 .byebug_history
-<<<<<<< HEAD
-=======
-
->>>>>>> 510a874225fd3851808969b497483f4eac1cb834
 .env
+/app/services/card_service.rb
